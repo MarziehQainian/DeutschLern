@@ -4,7 +4,7 @@
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">DeutschLern.Web</a>
+        <a class="navbar-brand" href="">DeutschLern</a>
     </div>
 </div>
 
@@ -14,30 +14,24 @@
     <nav class="nav flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="auth">
-                <span class="bi bi-lock-nav-menu" aria-hidden="true"></span> Auth Required
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> @T("خانه", "Start")
             </NavLink>
         </div>
 
         <AuthorizeView>
             <Authorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="dashboard">
+                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @T("داشبورد یادگیری", "Lernübersicht")
+                    </NavLink>
+                </div>
+                <AuthorizeView Roles="Admin" Context="adminContext">
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="admin">
+                            <span class="bi bi-gear-fill-nav-menu" aria-hidden="true"></span> @T("مدیریت", "Verwaltung")
+                        </NavLink>
+                    </div>
+                </AuthorizeView>
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="Account/Manage">
                         <span class="bi bi-person-fill-nav-menu" aria-hidden="true"></span> @context.User.Identity?.Name
@@ -48,7 +42,7 @@
                         <AntiforgeryToken />
                         <input type="hidden" name="ReturnUrl" value="@currentUrl" />
                         <button type="submit" class="nav-link">
-                            <span class="bi bi-arrow-bar-left-nav-menu" aria-hidden="true"></span> Logout
+                            <span class="bi bi-arrow-bar-left-nav-menu" aria-hidden="true"></span> @T("خروج", "Abmelden")
                         </button>
                     </form>
                 </div>
@@ -56,16 +50,21 @@
             <NotAuthorized>
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="Account/Register">
-                        <span class="bi bi-person-nav-menu" aria-hidden="true"></span> Register
+                        <span class="bi bi-person-nav-menu" aria-hidden="true"></span> @T("ثبت‌نام", "Registrieren")
                     </NavLink>
                 </div>
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="Account/Login">
-                        <span class="bi bi-person-badge-nav-menu" aria-hidden="true"></span> Login
+                        <span class="bi bi-person-badge-nav-menu" aria-hidden="true"></span> @T("ورود", "Anmelden")
                     </NavLink>
                 </div>
             </NotAuthorized>
         </AuthorizeView>
+        <div class="nav-item px-3 mt-3">
+            <a class="nav-link d-inline" href="/culture?value=fa&redirectUri=/">فارسی</a>
+            <span class="text-white-50">|</span>
+            <a class="nav-link d-inline" href="/culture?value=de&redirectUri=/">Deutsch</a>
+        </div>
     </nav>
 </div>
 
@@ -88,5 +87,8 @@
     {
         NavigationManager.LocationChanged -= OnLocationChanged;
     }
+
+    private static string T(string fa, string de) =>
+        CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fa" ? fa : de;
 }
 

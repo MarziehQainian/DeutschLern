@@ -1,7 +1,23 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>DeutschLern</PageTitle>
 
-<h1>Hello, world!</h1>
+<section class="hero rounded-4 p-4 p-md-5">
+    <span class="badge text-bg-warning mb-3">A1 — C1</span>
+    <h1 class="display-5 fw-bold">@T("آلمانی را مرحله‌به‌مرحله یاد بگیرید", "Deutsch Schritt für Schritt lernen")</h1>
+    <p class="lead col-lg-8">@T("واژگان کاربردی، مثال‌های واقعی و آزمون‌های کوتاه با مسیر یادگیری کنترل‌شده.", "Praktischer Wortschatz, echte Beispiele und kurze Tests in einem klaren Lernpfad.")</p>
+    <AuthorizeView>
+        <Authorized>
+            <a class="btn btn-primary btn-lg" href="/dashboard">@T("ادامه یادگیری", "Weiterlernen")</a>
+        </Authorized>
+        <NotAuthorized>
+            <a class="btn btn-primary btn-lg" href="/Account/Register">@T("شروع رایگان", "Kostenlos starten")</a>
+            <a class="btn btn-outline-primary btn-lg" href="/Account/Login">@T("ورود", "Anmelden")</a>
+        </NotAuthorized>
+    </AuthorizeView>
+</section>
 
-Welcome to your new app.
+@code {
+    private static string T(string fa, string de) =>
+        CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fa" ? fa : de;
+}

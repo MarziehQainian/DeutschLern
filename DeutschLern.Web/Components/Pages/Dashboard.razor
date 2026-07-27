@@ -1,0 +1,103 @@
+@page "/dashboard"
+@attribute [Authorize]
+@inject ILearningService LearningService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<PageTitle>@T("داشبورد", "Lernübersicht")</PageTitle>
+
+<h1>@T("مسیر یادگیری من", "Mein Lernpfad")</h1>
+<p class="text-secondary">@T("با قبولی در آزمون هر درس، درس بعدی باز می‌شود.", "Nach einem bestandenen Test wird die nächste Lektion freigeschaltet.")</p>
+
+@if (loading)
+{
+    <div class="d-flex align-items-center gap-2" role="status">
+        <div class="spinner-border spinner-border-sm"></div>
+        <span>@T("در حال بارگذاری…", "Wird geladen…")</span>
+    </div>
+}
+else if (error is not null)
+{
+    <div class="alert alert-danger">@error</div>
+}
+else
+{
+    @foreach (var level in levels)
+    {
+        <section class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h2 class="h4 mb-1">@level.Code</h2>
+                        <span class="text-secondary">@level.PersianName</span>
+                    </div>
+                    <strong>@level.ProgressPercent.ToString("0.##")٪</strong>
+                </div>
+                <div class="progress my-3" role="progressbar" aria-valuenow="@level.ProgressPercent" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: @(level.ProgressPercent)%"></div>
+                </div>
+                @if (level.Lessons.Count == 0)
+                {
+                    <div class="text-secondary">@T("هنوز درسی برای این سطح ثبت نشده است.", "Für dieses Niveau gibt es noch keine Lektionen.")</div>
+                }
+                <div class="row g-3">
+                    @foreach (var lesson in level.Lessons)
+                    {
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card h-100 lesson-card @(lesson.IsAvailable ? "" : "locked opacity-50")">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="badge text-bg-light">@T("درس", "Lektion") @lesson.Order</span>
+                                        <span aria-label="status">@(lesson.IsPassed ? "✓" : lesson.IsAvailable ? "●" : "🔒")</span>
+                                    </div>
+                                    <h3 class="h5 mt-3">@lesson.GermanTitle</h3>
+                                    <p class="text-secondary">@lesson.PersianTitle</p>
+                                    @if (lesson.HighestScore > 0)
+                                    {
+                                        <small>@T("بهترین نمره", "Bestes Ergebnis"): @lesson.HighestScore.ToString("0.##")٪</small>
+                                    }
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    @if (lesson.IsAvailable)
+                                    {
+                                        <a class="btn btn-outline-primary w-100" href="/lessons/@lesson.Id">@T("مشاهده درس", "Lektion öffnen")</a>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-outline-secondary w-100" disabled>@T("قفل است", "Gesperrt")</button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+    }
+}
+
+@code {
+    private IReadOnlyList<LevelProgressDto> levels = [];
+    private bool loading = true;
+    private string? error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var state = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var userId = state.User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+            levels = await LearningService.GetDashboardAsync(userId);
+        }
+        catch (Exception)
+        {
+            error = T("بارگذاری داشبورد ممکن نشد.", "Die Lernübersicht konnte nicht geladen werden.");
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    private static string T(string fa, string de) =>
+        CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fa" ? fa : de;
+}

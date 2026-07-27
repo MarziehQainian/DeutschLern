@@ -1,0 +1,192 @@
+@page "/lessons/{Id:int}"
+@attribute [Authorize]
+@inject ILearningService LearningService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<PageTitle>@(lesson?.GermanTitle ?? T("درس", "Lektion"))</PageTitle>
+
+@if (loading)
+{
+    <div class="spinner-border" role="status"><span class="visually-hidden">Loading</span></div>
+}
+else if (error is not null)
+{
+    <div class="alert alert-danger">@error</div>
+    <a class="btn btn-outline-primary" href="/dashboard">@T("بازگشت", "Zurück")</a>
+}
+else if (lesson is not null)
+{
+    <nav class="mb-3"><a href="/dashboard">← @T("داشبورد", "Lernübersicht")</a></nav>
+    <h1>@lesson.GermanTitle</h1>
+    <p class="lead text-secondary">@lesson.PersianTitle</p>
+
+    <h2 class="h4 mt-4">@T("واژگان", "Wortschatz")</h2>
+    <div class="row g-3">
+        @foreach (var word in lesson.Vocabularies)
+        {
+            <div class="col-md-6">
+                <article class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="word-german" dir="ltr">
+                            @if (word.Article is not null)
+                            {
+                                <span class="text-primary">@word.Article.ToString()!.ToLowerInvariant()</span>
+                            }
+                            @word.GermanWord
+                            @if (!string.IsNullOrWhiteSpace(word.PluralForm))
+                            {
+                                <small class="text-secondary">, @word.PluralForm</small>
+                            }
+                        </div>
+                        <div class="my-2">@word.PersianMeaning <span class="badge text-bg-light">@word.WordType</span></div>
+                        @foreach (var example in word.Examples)
+                        {
+                            <div class="border-start border-primary border-3 ps-3 mt-3">
+                                <div dir="ltr">@example.GermanText</div>
+                                <small class="text-secondary">@example.PersianTranslation</small>
+                            </div>
+                        }
+                    </div>
+                </article>
+            </div>
+        }
+    </div>
+
+    <section class="card border-0 shadow-sm mt-5">
+        <div class="card-body">
+            <h2 class="h4">@T("آزمون درس", "Lektionstest")</h2>
+            @if (quiz is null)
+            {
+                <div class="alert alert-warning">@T("آزمون این درس هنوز آماده نیست.", "Der Test ist noch nicht verfügbar.")</div>
+            }
+            else
+            {
+                @foreach (var question in quiz.Questions)
+                {
+                    <fieldset class="mb-4" disabled="@submitting">
+                        <legend class="h6">@question.Text</legend>
+                        @foreach (var option in question.Options)
+                        {
+                            var answerClass = ResultClass(question.Id, option.Id);
+                            <label class="form-check border rounded p-2 mb-2 @answerClass">
+                                <input class="form-check-input mx-2" type="radio"
+                                       name="question-@question.Id"
+                                       value="@option.Id"
+                                       checked="@(selectedAnswers.GetValueOrDefault(question.Id) == option.Id)"
+                                       @onchange="() => selectedAnswers[question.Id] = option.Id" />
+                                @option.Text
+                            </label>
+                        }
+                    </fieldset>
+                }
+                @if (result is not null)
+                {
+                    <div class="alert @(result.Passed ? "alert-success" : "alert-warning")">
+                        <strong>@result.ScorePercent.ToString("0.##")٪ — @(result.Passed ? T("قبول شدید", "Bestanden") : T("نیاز به تلاش دوباره", "Noch einmal versuchen"))</strong>
+                    </div>
+                }
+                @if (submitError is not null)
+                {
+                    <div class="alert alert-danger">@submitError</div>
+                }
+                <button class="btn btn-primary" @onclick="SubmitAsync" disabled="@submitting">
+                    @(submitting ? T("در حال ثبت…", "Wird gesendet…") : result is null ? T("ثبت آزمون", "Test abgeben") : T("تلاش دوباره", "Erneut versuchen"))
+                </button>
+            }
+        </div>
+    </section>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private Lesson? lesson;
+    private QuizDto? quiz;
+    private QuizResultDto? result;
+    private readonly Dictionary<int, int?> selectedAnswers = [];
+    private bool loading = true;
+    private bool submitting;
+    private string? error;
+    private string? submitError;
+    private string userId = "";
+
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            var state = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            userId = state.User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+            lesson = await LearningService.GetLessonAsync(Id, userId);
+            if (lesson is null)
+            {
+                error = T("درس پیدا نشد.", "Die Lektion wurde nicht gefunden.");
+                return;
+            }
+
+            try
+            {
+                quiz = await LearningService.GetQuizAsync(Id, userId);
+            }
+            catch (InvalidOperationException)
+            {
+                quiz = null;
+            }
+        }
+        catch (LessonLockedException)
+        {
+            error = T("ابتدا باید آزمون درس قبلی را با موفقیت بگذرانید.", "Bestehen Sie zuerst den Test der vorherigen Lektion.");
+        }
+        catch (Exception)
+        {
+            error = T("بارگذاری درس ممکن نشد.", "Die Lektion konnte nicht geladen werden.");
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    private async Task SubmitAsync()
+    {
+        if (quiz is null)
+        {
+            return;
+        }
+
+        submitting = true;
+        submitError = null;
+        try
+        {
+            var answers = quiz.Questions
+                .Select(x => new QuizAnswerInput(x.Id, selectedAnswers.GetValueOrDefault(x.Id)))
+                .ToList();
+            result = await LearningService.SubmitQuizAsync(Id, userId, answers);
+        }
+        catch (Exception)
+        {
+            submitError = T("ثبت آزمون ممکن نشد. دوباره تلاش کنید.", "Der Test konnte nicht gespeichert werden.");
+        }
+        finally
+        {
+            submitting = false;
+        }
+    }
+
+    private string ResultClass(int questionId, int optionId)
+    {
+        var answer = result?.Answers.SingleOrDefault(x => x.QuestionId == questionId);
+        if (answer is null)
+        {
+            return "";
+        }
+
+        if (optionId == answer.CorrectOptionId)
+        {
+            return "border-success bg-success-subtle";
+        }
+
+        return optionId == answer.SelectedOptionId ? "border-danger bg-danger-subtle" : "";
+    }
+
+    private static string T(string fa, string de) =>
+        CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fa" ? fa : de;
+}

@@ -1,0 +1,279 @@
+@page "/admin"
+@attribute [Authorize(Roles = "Admin")]
+@inject LearningDbContext Db
+
+<PageTitle>@T("مدیریت محتوا", "Inhalte verwalten")</PageTitle>
+
+<h1>@T("مدیریت محتوا", "Inhalte verwalten")</h1>
+<p class="text-secondary">@T("سطح‌ها، درس‌ها، واژگان و آزمون‌ها را از این صفحه مدیریت کنید.", "Niveaus, Lektionen, Wortschatz und Tests verwalten.")</p>
+
+@if (message is not null)
+{
+    <div class="alert @(hasError ? "alert-danger" : "alert-success")">@message</div>
+}
+
+<div class="accordion" id="admin-sections">
+    <section class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#levels">@T("سطح‌ها", "Niveaus")</button></h2>
+        <div id="levels" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+                <EditForm Model="levelForm" OnValidSubmit="SaveLevelAsync" FormName="level-form">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary class="text-danger" />
+                    <div class="row g-2">
+                        <div class="col-md-2"><InputText class="form-control" @bind-Value="levelForm.Code" placeholder="A1" /></div>
+                        <div class="col-md-5"><InputText class="form-control" @bind-Value="levelForm.PersianName" placeholder="@T("نام فارسی", "Persischer Name")" /></div>
+                        <div class="col-md-2"><InputNumber class="form-control" @bind-Value="levelForm.Order" /></div>
+                        <div class="col-md-3"><button class="btn btn-primary w-100">@T("ذخیره", "Speichern")</button></div>
+                    </div>
+                </EditForm>
+                <div class="table-responsive mt-3">
+                    <table class="table align-middle">
+                        <thead><tr><th>@T("کد", "Code")</th><th>@T("نام", "Name")</th><th>@T("ترتیب", "Reihenfolge")</th><th></th></tr></thead>
+                        <tbody>
+                        @foreach (var level in levels)
+                        {
+                            <tr>
+                                <td>@level.Code</td><td>@level.PersianName</td><td>@level.Order</td>
+                                <td class="text-nowrap">
+                                    <button class="btn btn-sm btn-outline-primary" @onclick="() => EditLevel(level)">@T("ویرایش", "Bearbeiten")</button>
+                                    <button class="btn btn-sm btn-outline-danger" @onclick="() => DeleteLevelAsync(level.Id)">@T("حذف", "Löschen")</button>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lessons">@T("درس‌ها", "Lektionen")</button></h2>
+        <div id="lessons" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <EditForm Model="lessonForm" OnValidSubmit="SaveLessonAsync" FormName="lesson-form">
+                    <DataAnnotationsValidator /><ValidationSummary class="text-danger" />
+                    <div class="row g-2">
+                        <div class="col-md-2">
+                            <InputSelect class="form-select" @bind-Value="lessonForm.LanguageLevelId">
+                                <option value="0">@T("سطح", "Niveau")</option>
+                                @foreach (var level in levels) { <option value="@level.Id">@level.Code</option> }
+                            </InputSelect>
+                        </div>
+                        <div class="col-md-3"><InputText class="form-control" @bind-Value="lessonForm.GermanTitle" placeholder="Deutscher Titel" /></div>
+                        <div class="col-md-3"><InputText class="form-control" @bind-Value="lessonForm.PersianTitle" placeholder="@T("عنوان فارسی", "Persischer Titel")" /></div>
+                        <div class="col-md-1"><InputNumber class="form-control" @bind-Value="lessonForm.Order" /></div>
+                        <div class="col-md-3"><button class="btn btn-primary w-100">@T("ذخیره درس", "Lektion speichern")</button></div>
+                    </div>
+                </EditForm>
+                <div class="list-group mt-3">
+                    @foreach (var lesson in AllLessons())
+                    {
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><span class="badge text-bg-secondary">@lesson.LanguageLevel!.Code · @lesson.Order</span> @lesson.GermanTitle — @lesson.PersianTitle</span>
+                            <span>
+                                <button class="btn btn-sm btn-outline-primary" @onclick="() => EditLesson(lesson)">@T("ویرایش", "Bearbeiten")</button>
+                                <button class="btn btn-sm btn-outline-danger" @onclick="() => DeleteLessonAsync(lesson.Id)">@T("حذف", "Löschen")</button>
+                            </span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#words">@T("واژگان و مثال‌ها", "Wortschatz und Beispiele")</button></h2>
+        <div id="words" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <EditForm Model="wordForm" OnValidSubmit="SaveWordAsync" FormName="word-form">
+                    <DataAnnotationsValidator /><ValidationSummary class="text-danger" />
+                    <div class="row g-2">
+                        <div class="col-md-3">
+                            <InputSelect class="form-select" @bind-Value="wordForm.LessonId">
+                                <option value="0">@T("درس", "Lektion")</option>
+                                @foreach (var lesson in AllLessons()) { <option value="@lesson.Id">@lesson.LanguageLevel!.Code · @lesson.GermanTitle</option> }
+                            </InputSelect>
+                        </div>
+                        <div class="col-md-3"><InputText class="form-control" @bind-Value="wordForm.GermanWord" placeholder="Deutsches Wort" /></div>
+                        <div class="col-md-3"><InputText class="form-control" @bind-Value="wordForm.PersianMeaning" placeholder="@T("معنی فارسی", "Persische Bedeutung")" /></div>
+                        <div class="col-md-3"><InputSelect class="form-select" @bind-Value="wordForm.WordType">@foreach (var type in Enum.GetValues<WordType>()) { <option value="@type">@type</option> }</InputSelect></div>
+                        <div class="col-md-2"><InputSelect class="form-select" @bind-Value="wordForm.Article"><option value="">—</option>@foreach (var article in Enum.GetValues<NounArticle>()) { <option value="@article">@article.ToString().ToLowerInvariant()</option> }</InputSelect></div>
+                        <div class="col-md-2"><InputText class="form-control" @bind-Value="wordForm.PluralForm" placeholder="Plural" /></div>
+                        <div class="col-md-4"><InputText class="form-control" @bind-Value="wordForm.GermanExample" placeholder="Beispielsatz" /></div>
+                        <div class="col-md-4"><InputText class="form-control" @bind-Value="wordForm.PersianExample" placeholder="@T("ترجمه مثال", "Beispielübersetzung")" /></div>
+                        <div class="col-12"><button class="btn btn-primary">@T("ذخیره واژه", "Wort speichern")</button></div>
+                    </div>
+                </EditForm>
+                <div class="table-responsive mt-3">
+                    <table class="table">
+                        <thead><tr><th>@T("درس", "Lektion")</th><th>@T("واژه", "Wort")</th><th>@T("معنی", "Bedeutung")</th><th></th></tr></thead>
+                        <tbody>
+                        @foreach (var word in AllWords())
+                        {
+                            <tr>
+                                <td>@word.Lesson!.GermanTitle</td><td>@word.GermanWord</td><td>@word.PersianMeaning</td>
+                                <td class="text-nowrap">
+                                    <button class="btn btn-sm btn-outline-primary" @onclick="() => EditWord(word)">@T("ویرایش", "Bearbeiten")</button>
+                                    <button class="btn btn-sm btn-outline-danger" @onclick="() => DeleteWordAsync(word.Id)">@T("حذف", "Löschen")</button>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#quizzes">@T("آزمون‌ها", "Tests")</button></h2>
+        <div id="quizzes" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <EditForm Model="questionForm" OnValidSubmit="AddQuestionAsync" FormName="question-form">
+                    <DataAnnotationsValidator /><ValidationSummary class="text-danger" />
+                    <div class="row g-2">
+                        <div class="col-md-4">
+                            <InputSelect class="form-select" @bind-Value="questionForm.LessonId">
+                                <option value="0">@T("درس", "Lektion")</option>
+                                @foreach (var lesson in AllLessons()) { <option value="@lesson.Id">@lesson.LanguageLevel!.Code · @lesson.GermanTitle</option> }
+                            </InputSelect>
+                        </div>
+                        <div class="col-md-8"><InputText class="form-control" @bind-Value="questionForm.Text" placeholder="@T("متن سؤال", "Frage")" /></div>
+                        <div class="col-md-3"><InputText class="form-control" @bind-Value="questionForm.Option1" placeholder="@T("گزینه ۱", "Antwort 1")" /></div>
+                        <div class="col-md-3"><InputText class="form-control" @bind-Value="questionForm.Option2" placeholder="@T("گزینه ۲", "Antwort 2")" /></div>
+                        <div class="col-md-3"><InputText class="form-control" @bind-Value="questionForm.Option3" placeholder="@T("گزینه ۳", "Antwort 3")" /></div>
+                        <div class="col-md-3"><InputText class="form-control" @bind-Value="questionForm.Option4" placeholder="@T("گزینه ۴", "Antwort 4")" /></div>
+                        <div class="col-md-3"><InputSelect class="form-select" @bind-Value="questionForm.CorrectOption"><option value="1">1 ✓</option><option value="2">2 ✓</option><option value="3">3 ✓</option><option value="4">4 ✓</option></InputSelect></div>
+                        <div class="col-md-3"><button class="btn btn-primary w-100">@T("افزودن سؤال", "Frage hinzufügen")</button></div>
+                    </div>
+                </EditForm>
+                <div class="mt-3">
+                    @foreach (var lesson in AllLessons().Where(x => x.Quiz is not null))
+                    {
+                        <h3 class="h6 mt-3">@lesson.GermanTitle</h3>
+                        @foreach (var question in lesson.Quiz!.Questions.OrderBy(x => x.Order))
+                        {
+                            <div class="d-flex justify-content-between border rounded p-2 mb-1">
+                                <span>@question.Order. @question.Text</span>
+                                <button class="btn btn-sm btn-outline-danger" @onclick="() => DeleteQuestionAsync(question.Id)">@T("حذف", "Löschen")</button>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@code {
+    private List<LanguageLevel> levels = [];
+    private LevelForm levelForm = new();
+    private LessonForm lessonForm = new();
+    private WordForm wordForm = new();
+    private QuestionForm questionForm = new();
+    private string? message;
+    private bool hasError;
+
+    protected override Task OnInitializedAsync() => ReloadAsync();
+
+    private async Task ReloadAsync()
+    {
+        Db.ChangeTracker.Clear();
+        levels = await Db.LanguageLevels
+            .Include(x => x.Lessons).ThenInclude(x => x.Vocabularies).ThenInclude(x => x.Examples)
+            .Include(x => x.Lessons).ThenInclude(x => x.Quiz!).ThenInclude(x => x.Questions).ThenInclude(x => x.Options)
+            .OrderBy(x => x.Order).ToListAsync();
+    }
+
+    private IEnumerable<Lesson> AllLessons() => levels.SelectMany(x => x.Lessons).OrderBy(x => x.LanguageLevel!.Order).ThenBy(x => x.Order);
+    private IEnumerable<Vocabulary> AllWords() => AllLessons().SelectMany(x => x.Vocabularies);
+
+    private async Task SaveLevelAsync()
+    {
+        await RunAsync(async () =>
+        {
+            var level = levelForm.Id == 0 ? new LanguageLevel { Code = levelForm.Code, PersianName = levelForm.PersianName } : await Db.LanguageLevels.FindAsync(levelForm.Id) ?? throw new InvalidOperationException();
+            level.Code = levelForm.Code.Trim().ToUpperInvariant(); level.PersianName = levelForm.PersianName.Trim(); level.Order = levelForm.Order;
+            if (levelForm.Id == 0) Db.Add(level);
+            await Db.SaveChangesAsync(); levelForm = new();
+        });
+    }
+
+    private void EditLevel(LanguageLevel level) => levelForm = new() { Id = level.Id, Code = level.Code, PersianName = level.PersianName, Order = level.Order };
+    private Task DeleteLevelAsync(int id) => RunAsync(async () => { Db.Remove((await Db.LanguageLevels.FindAsync(id))!); await Db.SaveChangesAsync(); });
+
+    private async Task SaveLessonAsync()
+    {
+        await RunAsync(async () =>
+        {
+            var lesson = lessonForm.Id == 0 ? new Lesson { GermanTitle = lessonForm.GermanTitle, PersianTitle = lessonForm.PersianTitle } : await Db.Lessons.FindAsync(lessonForm.Id) ?? throw new InvalidOperationException();
+            lesson.LanguageLevelId = lessonForm.LanguageLevelId; lesson.GermanTitle = lessonForm.GermanTitle.Trim(); lesson.PersianTitle = lessonForm.PersianTitle.Trim(); lesson.Order = lessonForm.Order;
+            if (lessonForm.Id == 0) Db.Add(lesson);
+            await Db.SaveChangesAsync(); lessonForm = new();
+        });
+    }
+
+    private void EditLesson(Lesson lesson) => lessonForm = new() { Id = lesson.Id, LanguageLevelId = lesson.LanguageLevelId, GermanTitle = lesson.GermanTitle, PersianTitle = lesson.PersianTitle, Order = lesson.Order };
+    private Task DeleteLessonAsync(int id) => RunAsync(async () => { Db.Remove((await Db.Lessons.FindAsync(id))!); await Db.SaveChangesAsync(); });
+
+    private async Task SaveWordAsync()
+    {
+        await RunAsync(async () =>
+        {
+            Vocabulary word;
+            if (wordForm.Id == 0)
+            {
+                word = new Vocabulary { GermanWord = wordForm.GermanWord, PersianMeaning = wordForm.PersianMeaning };
+                Db.Add(word);
+            }
+            else
+            {
+                word = await Db.Vocabularies.Include(x => x.Examples).SingleAsync(x => x.Id == wordForm.Id);
+            }
+            word.LessonId = wordForm.LessonId; word.GermanWord = wordForm.GermanWord.Trim(); word.PersianMeaning = wordForm.PersianMeaning.Trim();
+            word.WordType = wordForm.WordType; word.Article = wordForm.WordType == WordType.Noun ? wordForm.Article : null; word.PluralForm = string.IsNullOrWhiteSpace(wordForm.PluralForm) ? null : wordForm.PluralForm.Trim();
+            if (!string.IsNullOrWhiteSpace(wordForm.GermanExample) && !string.IsNullOrWhiteSpace(wordForm.PersianExample))
+            {
+                word.Examples.Add(new ExampleSentence { GermanText = wordForm.GermanExample.Trim(), PersianTranslation = wordForm.PersianExample.Trim() });
+            }
+            word.ValidateForPublishing();
+            await Db.SaveChangesAsync(); wordForm = new();
+        });
+    }
+
+    private void EditWord(Vocabulary word) => wordForm = new() { Id = word.Id, LessonId = word.LessonId, GermanWord = word.GermanWord, PersianMeaning = word.PersianMeaning, WordType = word.WordType, Article = word.Article, PluralForm = word.PluralForm };
+    private Task DeleteWordAsync(int id) => RunAsync(async () => { Db.Remove((await Db.Vocabularies.FindAsync(id))!); await Db.SaveChangesAsync(); });
+
+    private async Task AddQuestionAsync()
+    {
+        await RunAsync(async () =>
+        {
+            var quiz = await Db.Quizzes.Include(x => x.Questions).SingleOrDefaultAsync(x => x.LessonId == questionForm.LessonId);
+            if (quiz is null) { quiz = new Quiz { LessonId = questionForm.LessonId }; Db.Add(quiz); }
+            var values = new[] { questionForm.Option1, questionForm.Option2, questionForm.Option3, questionForm.Option4 };
+            quiz.Questions.Add(new QuizQuestion
+            {
+                Text = questionForm.Text.Trim(), Order = quiz.Questions.Count + 1,
+                Options = values.Select((value, index) => new QuizOption { Text = value.Trim(), IsCorrect = index + 1 == questionForm.CorrectOption }).ToList()
+            });
+            await Db.SaveChangesAsync(); questionForm = new();
+        });
+    }
+
+    private Task DeleteQuestionAsync(int id) => RunAsync(async () => { Db.Remove((await Db.QuizQuestions.FindAsync(id))!); await Db.SaveChangesAsync(); });
+
+    private async Task RunAsync(Func<Task> action)
+    {
+        try { await action(); message = T("تغییرات ذخیره شد.", "Änderungen wurden gespeichert."); hasError = false; await ReloadAsync(); }
+        catch (Exception ex) { message = ex is DomainValidationException ? T("هر واژه حداقل به یک مثال نیاز دارد.", "Jedes Wort braucht mindestens einen Beispielsatz.") : T("ذخیره ممکن نشد؛ ترتیب‌ها و مقادیر تکراری را بررسی کنید.", "Speichern fehlgeschlagen. Reihenfolge und doppelte Werte prüfen."); hasError = true; }
+    }
+
+    private static string T(string fa, string de) => CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fa" ? fa : de;
+
+    private sealed class LevelForm { public int Id { get; set; } [Required, StringLength(2, MinimumLength = 2)] public string Code { get; set; } = ""; [Required, StringLength(80)] public string PersianName { get; set; } = ""; [Range(1, 99)] public int Order { get; set; } = 1; }
+    private sealed class LessonForm { public int Id { get; set; } [Range(1, int.MaxValue)] public int LanguageLevelId { get; set; } [Required, StringLength(150)] public string GermanTitle { get; set; } = ""; [Required, StringLength(150)] public string PersianTitle { get; set; } = ""; [Range(1, 999)] public int Order { get; set; } = 1; }
+    private sealed class WordForm { public int Id { get; set; } [Range(1, int.MaxValue)] public int LessonId { get; set; } [Required, StringLength(100)] public string GermanWord { get; set; } = ""; [Required, StringLength(200)] public string PersianMeaning { get; set; } = ""; public WordType WordType { get; set; } public NounArticle? Article { get; set; } [StringLength(100)] public string? PluralForm { get; set; } [StringLength(500)] public string? GermanExample { get; set; } [StringLength(500)] public string? PersianExample { get; set; } }
+    private sealed class QuestionForm { [Range(1, int.MaxValue)] public int LessonId { get; set; } [Required, StringLength(500)] public string Text { get; set; } = ""; [Required, StringLength(300)] public string Option1 { get; set; } = ""; [Required, StringLength(300)] public string Option2 { get; set; } = ""; [Required, StringLength(300)] public string Option3 { get; set; } = ""; [Required, StringLength(300)] public string Option4 { get; set; } = ""; [Range(1, 4)] public int CorrectOption { get; set; } = 1; }
+}

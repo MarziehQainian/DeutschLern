@@ -1,5 +1,25 @@
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #f7f8fb;
+}
+
+.hero {
+    background: linear-gradient(135deg, #e9f2ff, #fff7dc);
+    border: 1px solid #dce6f2;
+}
+
+.lesson-card {
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.lesson-card:not(.locked):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 1rem rgba(24, 41, 74, .08);
+}
+
+.word-german {
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 a, .btn-link {
