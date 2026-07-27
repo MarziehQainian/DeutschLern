@@ -2,6 +2,7 @@
 @attribute [Authorize]
 @inject ILearningService LearningService
 @inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IJSRuntime JS
 
 <PageTitle>@(lesson?.GermanTitle ?? T("درس", "Lektion"))</PageTitle>
 
@@ -37,12 +38,24 @@ else if (lesson is not null)
                             {
                                 <small class="text-secondary">, @word.PluralForm</small>
                             }
+                            <button type="button"
+                                    class="btn btn-sm btn-link text-decoration-none"
+                                    title="@T("تلفظ واژه", "Wort aussprechen")"
+                                    aria-label="@T($"تلفظ {word.GermanWord}", $"{word.GermanWord} aussprechen")"
+                                    @onclick="() => SpeakAsync(word.GermanWord)">
+                                🔊
+                            </button>
                         </div>
                         <div class="my-2">@word.PersianMeaning <span class="badge text-bg-light">@word.WordType</span></div>
                         @foreach (var example in word.Examples)
                         {
                             <div class="border-start border-primary border-3 ps-3 mt-3">
                                 <div dir="ltr">@example.GermanText</div>
+                                <button type="button"
+                                        class="btn btn-sm btn-outline-secondary my-1"
+                                        @onclick="() => SpeakAsync(example.GermanText)">
+                                    🔊 @T("شنیدن جمله", "Satz anhören")
+                                </button>
                                 <small class="text-secondary">@example.PersianTranslation</small>
                             </div>
                         }
@@ -189,4 +202,24 @@ else if (lesson is not null)
 
     private static string T(string fa, string de) =>
         CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fa" ? fa : de;
+
+    private async Task SpeakAsync(string text)
+    {
+        try
+        {
+            var supported = await JS.InvokeAsync<bool>("deutschLernSpeech.speak", text);
+            if (!supported)
+            {
+                submitError = T(
+                    "مرورگر شما از خواندن متن پشتیبانی نمی‌کند.",
+                    "Ihr Browser unterstützt keine Sprachausgabe.");
+            }
+        }
+        catch (JSException)
+        {
+            submitError = T(
+                "پخش تلفظ ممکن نشد.",
+                "Die Aussprache konnte nicht wiedergegeben werden.");
+        }
+    }
 }

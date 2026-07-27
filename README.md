@@ -7,6 +7,7 @@ DeutschLern is a German vocabulary learning web application designed for Persian
 - Student registration and authentication with ASP.NET Core Identity
 - Progress dashboard with the latest attempt and highest score
 - German vocabulary with word type, noun article, plural form, example sentence, and Persian translation
+- Built-in German pronunciation for words and example sentences through the browser Web Speech API
 - Multiple-choice quizzes with retry support and post-submission feedback
 - Server-side lesson access enforcement
 - Admin panel for managing levels, lessons, vocabulary, examples, and quizzes
@@ -71,12 +72,14 @@ The initial learning migration seeds the A1, A2, B1, B2, and C1 levels.
 
 In Development, an idempotent sample dataset is also created on first startup:
 
-- 10 ordered lessons
-- 30 vocabulary entries
-- 30 German example sentences with Persian translations
-- 10 quizzes
-- 30 quiz questions
-- 120 answer options
+- 22 ordered lessons in total
+- 561 vocabulary records
+- 561 German example sentences with Persian translations
+- 22 quizzes
+- 150 quiz questions
+- 600 answer options
+
+The A1 book import contains 532 source entries. One duplicate `Fahrrad` cross-reference is removed, resulting in 531 unique imported vocabulary records organized into 12 alphabetic A1 lessons. The extraction tool is available at `tools/extract_a1_vocabulary.py`; the source PDF itself is not stored in the repository.
 
 Restarting the application does not duplicate the sample data. Development data is never seeded in Production.
 

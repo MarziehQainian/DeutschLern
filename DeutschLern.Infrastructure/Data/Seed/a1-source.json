@@ -1,0 +1,3194 @@
+[
+  {
+    "id": 1,
+    "page": 9,
+    "raw": "ab",
+    "example": "Ab morgen haben wir Ferien."
+  },
+  {
+    "id": 2,
+    "page": 9,
+    "raw": "aber",
+    "example": "Der Film ist traurig, aber sehr schön."
+  },
+  {
+    "id": 3,
+    "page": 9,
+    "raw": "abfahren",
+    "example": "Der Zug fährt gleich ab."
+  },
+  {
+    "id": 4,
+    "page": 9,
+    "raw": "abgeben",
+    "example": "Kann ich das Buch hier abgeben?"
+  },
+  {
+    "id": 5,
+    "page": 9,
+    "raw": "abholen",
+    "example": "Ich hole dich am Bahnhof ab."
+  },
+  {
+    "id": 6,
+    "page": 9,
+    "raw": "e Achtung (Sg.)",
+    "example": "Achtung! Jetzt fängt es an."
+  },
+  {
+    "id": 7,
+    "page": 9,
+    "raw": "e Adresse, -n",
+    "example": "Ich weiß die Adresse nicht."
+  },
+  {
+    "id": 8,
+    "page": 9,
+    "raw": "e Ahnung, -en",
+    "example": "Ich habe keine Ahnung!"
+  },
+  {
+    "id": 9,
+    "page": 9,
+    "raw": "alle",
+    "example": "Sind alle da? Hast du alles?"
+  },
+  {
+    "id": 10,
+    "page": 9,
+    "raw": "allein",
+    "example": "Er arbeitet gern allein."
+  },
+  {
+    "id": 11,
+    "page": 9,
+    "raw": "also",
+    "example": "Wir haben viel Platz, du kannst also bei uns schlafen."
+  },
+  {
+    "id": 12,
+    "page": 9,
+    "raw": "alt",
+    "example": "Wie alt bist du? Unser Haus ist sehr alt."
+  },
+  {
+    "id": 13,
+    "page": 9,
+    "raw": "s Alter (Sg.)",
+    "example": "Alter: 15 Jahre"
+  },
+  {
+    "id": 14,
+    "page": 9,
+    "raw": "an",
+    "example": "Am Sonntag/am Abend/am Anfang/am Meer/ am Fenster/an den See/am Marktplatz"
+  },
+  {
+    "id": 15,
+    "page": 9,
+    "raw": "ander-",
+    "example": "Gefällt dir die Jacke? / Nein, die andere finde ich schöner."
+  },
+  {
+    "id": 16,
+    "page": 9,
+    "raw": "r Anfang, ä, -e",
+    "example": "Am Anfang ist das Buch langweilig."
+  },
+  {
+    "id": 17,
+    "page": 9,
+    "raw": "anfangen",
+    "example": "Fangt bitte mit Übung 12 an. / Fängst du an?"
+  },
+  {
+    "id": 18,
+    "page": 9,
+    "raw": "e Angst, ä, -e",
+    "example": "Er hat Angst."
+  },
+  {
+    "id": 19,
+    "page": 9,
+    "raw": "ankommen",
+    "example": "Wann kommt ihr in Berlin an?"
+  },
+  {
+    "id": 20,
+    "page": 9,
+    "raw": "anrufen",
+    "example": "Ich rufe dich morgen an."
+  },
+  {
+    "id": 21,
+    "page": 9,
+    "raw": "r Anruf, e",
+    "example": "Ich warte dann auf deinen Anruf - okay?"
+  },
+  {
+    "id": 22,
+    "page": 9,
+    "raw": "r Anrufbeantworter",
+    "example": "Sind Nachrichten auf dem Anrufbeantworter?"
+  },
+  {
+    "id": 23,
+    "page": 9,
+    "raw": "e Antwort, -en",
+    "example": "Weißt du die Antwort?"
+  },
+  {
+    "id": 24,
+    "page": 9,
+    "raw": "antworten",
+    "example": "Warum antwortest du nicht?"
+  },
+  {
+    "id": 25,
+    "page": 9,
+    "raw": "e Anzeige, -n",
+    "example": "Lies bitte die Anzeige in der Zeitung!"
+  },
+  {
+    "id": 26,
+    "page": 9,
+    "raw": "r Apfel, Ä, -",
+    "example": "Schmeckt dir der Apfel?"
+  },
+  {
+    "id": 27,
+    "page": 9,
+    "raw": "e Apotheke, -n",
+    "example": "Aspirin? Das bekommen Sie in der Apotheke."
+  },
+  {
+    "id": 28,
+    "page": 9,
+    "raw": "r Appetit (Sg.)",
+    "example": "Guten Appetit!"
+  },
+  {
+    "id": 29,
+    "page": 9,
+    "raw": "e Arbeit, -en",
+    "example": "War die Physikarbeit schwer?"
+  },
+  {
+    "id": 30,
+    "page": 9,
+    "raw": "arbeiten",
+    "example": "Mein Vater arbeitet bei einer Autofirma."
+  },
+  {
+    "id": 31,
+    "page": 9,
+    "raw": "arbeitslos",
+    "example": "Meine Mutter ist arbeitslos."
+  },
+  {
+    "id": 32,
+    "page": 9,
+    "raw": "r Arm, -e",
+    "example": "Mein Arm tut weh."
+  },
+  {
+    "id": 33,
+    "page": 9,
+    "raw": "r Artikel, -",
+    "example": "Der Artikel in der Zeitung ist sehr interessant."
+  },
+  {
+    "id": 34,
+    "page": 9,
+    "raw": "r Arzt, Ä, -e",
+    "example": "Er war beim Arzt."
+  },
+  {
+    "id": 35,
+    "page": 9,
+    "raw": "e Ärztin, -nen",
+    "example": "Die Ärztin arbeitet im Krankenhaus."
+  },
+  {
+    "id": 36,
+    "page": 9,
+    "raw": "auch",
+    "example": "Ich möchte auch mitspielen."
+  },
+  {
+    "id": 37,
+    "page": 9,
+    "raw": "auf",
+    "example": "Die Zeitung ist auf dem Tisch./ Auf dem Foto bin ich mit meiner Schwester./ Wie heißt das auf Deutsch?"
+  },
+  {
+    "id": 38,
+    "page": 9,
+    "raw": "aufmachen",
+    "example": "Kannst du bitte das Fenster aufmachen?"
+  },
+  {
+    "id": 39,
+    "page": 9,
+    "raw": "aufpassen",
+    "example": "Könnt ihr bitte aufpassen? Ich zeige euch, wie es geht."
+  },
+  {
+    "id": 40,
+    "page": 9,
+    "raw": "aufräumen",
+    "example": "Räum bitte dein Zimmer auf."
+  },
+  {
+    "id": 41,
+    "page": 9,
+    "raw": "auf sein",
+    "example": "Das Fenster ist auf."
+  },
+  {
+    "id": 42,
+    "page": 9,
+    "raw": "aufstehen",
+    "example": "Um acht Uhr stehen wir auf."
+  },
+  {
+    "id": 43,
+    "page": 9,
+    "raw": "s Auge, -n",
+    "example": "Seine Augen sind grün."
+  },
+  {
+    "id": 44,
+    "page": 9,
+    "raw": "aus",
+    "example": "Wann kommt ihr aus der Schule?/ Ich komme aus Deutschland."
+  },
+  {
+    "id": 45,
+    "page": 10,
+    "raw": "r Ausflug, ü, -e",
+    "example": "Wir machen mit der Schule einen Ausflug."
+  },
+  {
+    "id": 46,
+    "page": 10,
+    "raw": "s Ausland (Sg.)",
+    "example": "Mein Vater war lange im Ausland."
+  },
+  {
+    "id": 47,
+    "page": 10,
+    "raw": "aussehen",
+    "example": "Das Buch sieht sehr interessant aus. Du siehst heute hübsch aus."
+  },
+  {
+    "id": 48,
+    "page": 10,
+    "raw": "aus sein",
+    "example": "Um ein Uhr ist die Schule aus."
+  },
+  {
+    "id": 49,
+    "page": 10,
+    "raw": "aussteigen",
+    "example": "Du musst am Marktplatz aussteigen."
+  },
+  {
+    "id": 50,
+    "page": 10,
+    "raw": "s Auto, -s",
+    "example": "Wir kommen mit dem Auto."
+  },
+  {
+    "id": 51,
+    "page": 10,
+    "raw": "r Automat, -en",
+    "example": "Die Fahrkarte bekommst du am Automaten."
+  },
+  {
+    "id": 52,
+    "page": 10,
+    "raw": "s Baby, -s",
+    "example": "Meine Schwester ist noch ein Baby."
+  },
+  {
+    "id": 53,
+    "page": 10,
+    "raw": "s Bad, ä, -er",
+    "example": "Wo ist das Bad?"
+  },
+  {
+    "id": 54,
+    "page": 10,
+    "raw": "r Bahnhof, ö, -e",
+    "example": "Wir gehen zum Bahnhof."
+  },
+  {
+    "id": 55,
+    "page": 10,
+    "raw": "r Bahnsteig, -e",
+    "example": "Der Zug kommt auf Bahnsteig zehn an."
+  },
+  {
+    "id": 56,
+    "page": 10,
+    "raw": "bald",
+    "example": "Bis bald!"
+  },
+  {
+    "id": 57,
+    "page": 10,
+    "raw": "r Ball, ä, -e",
+    "example": "Wir spielen mit dem Ball."
+  },
+  {
+    "id": 58,
+    "page": 10,
+    "raw": "e Banane, -n",
+    "example": "Kann ich eine Banane haben? Ich habe Hunger."
+  },
+  {
+    "id": 59,
+    "page": 10,
+    "raw": "e Band, -s",
+    "example": "Die Schülerband spielt heute um 9."
+  },
+  {
+    "id": 60,
+    "page": 10,
+    "raw": "r Basketball, ä, -e",
+    "example": "Meine Hobbys sind Basketball und Musik."
+  },
+  {
+    "id": 61,
+    "page": 10,
+    "raw": "basteln",
+    "example": "Basteln ist mein Hobby."
+  },
+  {
+    "id": 62,
+    "page": 10,
+    "raw": "r Bauch, ä, -e",
+    "example": "Mein Bauch tut weh."
+  },
+  {
+    "id": 63,
+    "page": 10,
+    "raw": "r Baum, ä, -e",
+    "example": "Die Bäume sind schon grün."
+  },
+  {
+    "id": 64,
+    "page": 10,
+    "raw": "bedeuten",
+    "example": "Was bedeutet das?"
+  },
+  {
+    "id": 65,
+    "page": 10,
+    "raw": "bei",
+    "example": "Er wohnt bei seinen Freunden./ Sie arbeitet bei Herrn Müller."
+  },
+  {
+    "id": 66,
+    "page": 10,
+    "raw": "beide",
+    "example": "Meine Schwester und ich, wir beide sind immer zusammen."
+  },
+  {
+    "id": 67,
+    "page": 10,
+    "raw": "bekommen",
+    "example": "Was bekommst du zum Geburtstag?"
+  },
+  {
+    "id": 68,
+    "page": 10,
+    "raw": "r Beruf, -e",
+    "example": "Was ist deine Mutter von Beruf?"
+  },
+  {
+    "id": 69,
+    "page": 10,
+    "raw": "besetzt",
+    "example": "Der Platz ist besetzt."
+  },
+  {
+    "id": 70,
+    "page": 10,
+    "raw": "besonders",
+    "example": "Das finde ich besonders interessant."
+  },
+  {
+    "id": 71,
+    "page": 10,
+    "raw": "besser",
+    "example": "Hoffentlich geht es dir bald besser."
+  },
+  {
+    "id": 72,
+    "page": 10,
+    "raw": "r, e, s beste",
+    "example": "der beste Schüler, die beste Freundin, das beste Buch"
+  },
+  {
+    "id": 73,
+    "page": 10,
+    "raw": "besuchen",
+    "example": "Im Sommer besuche ich dich."
+  },
+  {
+    "id": 74,
+    "page": 10,
+    "raw": "s Bett, -en",
+    "example": "Wann gehst du ins Bett?"
+  },
+  {
+    "id": 75,
+    "page": 10,
+    "raw": "bezahlen",
+    "example": "Wo muss ich bezahlen?"
+  },
+  {
+    "id": 76,
+    "page": 10,
+    "raw": "e Bibliothek, -en",
+    "example": "In der Bibliothek gibt es dreißigtausend Bücher."
+  },
+  {
+    "id": 77,
+    "page": 10,
+    "raw": "billig",
+    "example": "Die Brötchen sind hier billig und gut."
+  },
+  {
+    "id": 78,
+    "page": 10,
+    "raw": "bis",
+    "example": "Wir haben bis ein Uhr Unterricht./ Wir fahren nur bis Mannheim."
+  },
+  {
+    "id": 79,
+    "page": 10,
+    "raw": "bisschen",
+    "example": "Ich helfe dir ein bisschen."
+  },
+  {
+    "id": 80,
+    "page": 10,
+    "raw": "bitte",
+    "example": "Können Sie mir bitte helfen? Bitte komm schnell!"
+  },
+  {
+    "id": 81,
+    "page": 10,
+    "raw": "bleiben",
+    "example": "Wir bleiben zu Hause."
+  },
+  {
+    "id": 82,
+    "page": 10,
+    "raw": "r Bleistift, -e",
+    "example": "Hier ist dein Bleistift."
+  },
+  {
+    "id": 83,
+    "page": 10,
+    "raw": "blöd",
+    "example": "Ich finde dich blöd!"
+  },
+  {
+    "id": 84,
+    "page": 10,
+    "raw": "e Blume, -n",
+    "example": "Hier sind Blumen für dich."
+  },
+  {
+    "id": 85,
+    "page": 10,
+    "raw": "e Bluse, -n",
+    "example": "Ich möchte eine rote Bluse."
+  },
+  {
+    "id": 86,
+    "page": 10,
+    "raw": "brauchen",
+    "example": "Ich brauche einen Taschenrechner."
+  },
+  {
+    "id": 87,
+    "page": 10,
+    "raw": "r Brief, -e",
+    "example": "Sie bekommt immer viele Briefe."
+  },
+  {
+    "id": 88,
+    "page": 10,
+    "raw": "bringen",
+    "example": "Ich bringe dir die Bücher morgen."
+  },
+  {
+    "id": 89,
+    "page": 11,
+    "raw": "s Brot, -e",
+    "example": "Wir müssen auch Brot kaufen./ Bitte ein Wurstbrot."
+  },
+  {
+    "id": 90,
+    "page": 11,
+    "raw": "s Brötchen, -",
+    "example": "Ich esse lieber Brötchen."
+  },
+  {
+    "id": 91,
+    "page": 11,
+    "raw": "s Buch, ü, er",
+    "example": "Die Bücher sind schon im Rucksack."
+  },
+  {
+    "id": 92,
+    "page": 11,
+    "raw": "r Bus, -se",
+    "example": "Sie fährt mit dem Bus."
+  },
+  {
+    "id": 93,
+    "page": 11,
+    "raw": "e CD, -s",
+    "example": "Wir können ihm eine CD schenken."
+  },
+  {
+    "id": 94,
+    "page": 11,
+    "raw": "r Comic, -s",
+    "example": "Liest du gern Comics?"
+  },
+  {
+    "id": 95,
+    "page": 11,
+    "raw": "r Computer, -",
+    "example": "Mein Computer ist schon alt."
+  },
+  {
+    "id": 96,
+    "page": 11,
+    "raw": "da",
+    "example": "Die Zeitung ist da auf dem Tisch./Ist Erika auch da?"
+  },
+  {
+    "id": 97,
+    "page": 11,
+    "raw": "r Dank (Sg.)",
+    "example": "Vielen Dank!"
+  },
+  {
+    "id": 98,
+    "page": 11,
+    "raw": "danken",
+    "example": "Die CD ist wunderbar, ich danke dir."
+  },
+  {
+    "id": 99,
+    "page": 11,
+    "raw": "dann",
+    "example": "Gib mir deine Adresse, dann schreibe ich dir!"
+  },
+  {
+    "id": 100,
+    "page": 11,
+    "raw": "dein, -e",
+    "example": "Hier ist dein Platz. (vergl. Grammatik)"
+  },
+  {
+    "id": 101,
+    "page": 11,
+    "raw": "denken",
+    "example": "Ich denke, die Hausaufgaben sind sehr einfach."
+  },
+  {
+    "id": 102,
+    "page": 11,
+    "raw": "der, die, das",
+    "example": "Möchtest du das da? (vergl. Grammatik)"
+  },
+  {
+    "id": 103,
+    "page": 11,
+    "raw": "deshalb",
+    "example": "Ich muss lernen, deshalb bleibe ich zu Hause."
+  },
+  {
+    "id": 104,
+    "page": 11,
+    "raw": "dick",
+    "example": "Ich bin leider sehr dick."
+  },
+  {
+    "id": 105,
+    "page": 11,
+    "raw": "e Disco, -s (-thek, -en)",
+    "example": "Sie geht gern in die Diskothek."
+  },
+  {
+    "id": 106,
+    "page": 11,
+    "raw": "doch",
+    "example": "Magst du das nicht? – Doch, es schmeckt gut."
+  },
+  {
+    "id": 107,
+    "page": 11,
+    "raw": "dort",
+    "example": "Du gehst in die Stadt? Und was machst du dort?"
+  },
+  {
+    "id": 108,
+    "page": 11,
+    "raw": "du",
+    "example": "Wie heißt du? (vergl. Grammatik)"
+  },
+  {
+    "id": 109,
+    "page": 11,
+    "raw": "dumm",
+    "example": "Das finde ich dumm."
+  },
+  {
+    "id": 110,
+    "page": 11,
+    "raw": "durch",
+    "example": "Wir fahren durch die Stadt."
+  },
+  {
+    "id": 111,
+    "page": 11,
+    "raw": "r Durst (Sg.)",
+    "example": "Hast du Durst?"
+  },
+  {
+    "id": 112,
+    "page": 11,
+    "raw": "duschen",
+    "example": "Erst dusche ich, dann gehe ich zum Frühstück."
+  },
+  {
+    "id": 113,
+    "page": 11,
+    "raw": "s Ei, -er",
+    "example": "Möchtest du ein Ei zum Frühstück?"
+  },
+  {
+    "id": 114,
+    "page": 11,
+    "raw": "ein, e",
+    "example": "Haben Sie ein Buch von Michael Ende? (vergl. Grammatik)"
+  },
+  {
+    "id": 115,
+    "page": 11,
+    "raw": "einfach",
+    "example": "Du kannst ihn einfach fragen./ Die Übung ist ganz einfach."
+  },
+  {
+    "id": 116,
+    "page": 11,
+    "raw": "einkaufen",
+    "example": "Wer kauft bei euch ein?"
+  },
+  {
+    "id": 117,
+    "page": 11,
+    "raw": "einladen",
+    "example": "Ich lade dich ein."
+  },
+  {
+    "id": 118,
+    "page": 11,
+    "raw": "e Einladung, -en",
+    "example": "Das ist eine Einladung zur Geburtstagsparty."
+  },
+  {
+    "id": 119,
+    "page": 11,
+    "raw": "einmal",
+    "example": "Kannst du mir das noch einmal erklären?"
+  },
+  {
+    "id": 120,
+    "page": 11,
+    "raw": "e Eins (Sg.)",
+    "example": "In Englisch habe ich eine Eins."
+  },
+  {
+    "id": 121,
+    "page": 11,
+    "raw": "einsteigen",
+    "example": "Bitte steigen Sie ein!"
+  },
+  {
+    "id": 122,
+    "page": 11,
+    "raw": "einverstanden sein",
+    "example": "Bist du einverstanden?"
+  },
+  {
+    "id": 123,
+    "page": 11,
+    "raw": "s Eis (Sg.)",
+    "example": "Ich möchte ein großes Eis."
+  },
+  {
+    "id": 124,
+    "page": 11,
+    "raw": "e Eltern (Pl.)",
+    "example": "Meine Eltern leben in Spanien."
+  },
+  {
+    "id": 125,
+    "page": 11,
+    "raw": "s Ende (Sg)",
+    "example": "Das Ende war sehr traurig."
+  },
+  {
+    "id": 126,
+    "page": 11,
+    "raw": "endlich",
+    "example": "Wann antwortest du endlich?"
+  },
+  {
+    "id": 127,
+    "page": 11,
+    "raw": "entschuldigen",
+    "example": "Bitte, entschuldigen Sie!"
+  },
+  {
+    "id": 128,
+    "page": 11,
+    "raw": "e Entschuldigung, -en",
+    "example": "Oh, Entschuldigung!"
+  },
+  {
+    "id": 129,
+    "page": 11,
+    "raw": "er",
+    "example": "Was macht er jetzt? (vergl. Grammatik)"
+  },
+  {
+    "id": 130,
+    "page": 12,
+    "raw": "erklären",
+    "example": "Können Sie das bitte erklären?"
+  },
+  {
+    "id": 131,
+    "page": 12,
+    "raw": "r/e Erwachsene, -n",
+    "example": "Dieser Film ist nur für Erwachsene."
+  },
+  {
+    "id": 132,
+    "page": 12,
+    "raw": "erzählen",
+    "example": "Kannst du die Geschichte erzählen?"
+  },
+  {
+    "id": 133,
+    "page": 12,
+    "raw": "es",
+    "example": "Heute ist es sehr warm./Hier gibt es auch ein altes Schloss./Wie geht es dir/Ihnen? (vergl. Grammatik)"
+  },
+  {
+    "id": 134,
+    "page": 12,
+    "raw": "essen",
+    "example": "Was wollt ihr essen?"
+  },
+  {
+    "id": 135,
+    "page": 12,
+    "raw": "s Essen, -",
+    "example": "Wie war das Essen in Deutschland?"
+  },
+  {
+    "id": 136,
+    "page": 12,
+    "raw": "etwas",
+    "example": "Ich bringe dir etwas."
+  },
+  {
+    "id": 137,
+    "page": 12,
+    "raw": "euer",
+    "example": "Ist das euer Hund? (vergl. Grammatik)"
+  },
+  {
+    "id": 138,
+    "page": 12,
+    "raw": "s Fach, ä, -er",
+    "example": "Chemie ist mein Lieblingsfach."
+  },
+  {
+    "id": 139,
+    "page": 12,
+    "raw": "fahren",
+    "example": "Wohin fahrt ihr?"
+  },
+  {
+    "id": 140,
+    "page": 12,
+    "raw": "e Fahrkarte, -n",
+    "example": "Sie brauchen eine Fahrkarte."
+  },
+  {
+    "id": 141,
+    "page": 12,
+    "raw": "r Fahrplan, ä, -e",
+    "example": "Da ist der Fahrplan!"
+  },
+  {
+    "id": 142,
+    "page": 12,
+    "raw": "s Fahrrad, ä, -er",
+    "example": "Wir kommen mit dem Fahrrad."
+  },
+  {
+    "id": 143,
+    "page": 12,
+    "raw": "e Familie, -n",
+    "example": "Er hat eine große Familie."
+  },
+  {
+    "id": 144,
+    "page": 12,
+    "raw": "r Familienname, -n",
+    "example": "Mein Familienname ist Schmidt."
+  },
+  {
+    "id": 145,
+    "page": 12,
+    "raw": "r Fehler, -",
+    "example": "Ich hatte vier Fehler in der Englischarbeit."
+  },
+  {
+    "id": 146,
+    "page": 12,
+    "raw": "s Fenster, -",
+    "example": "Ich möchte einen Platz am Fenster."
+  },
+  {
+    "id": 147,
+    "page": 12,
+    "raw": "e Ferien (Pl.)",
+    "example": "Was macht ihr in den Ferien?"
+  },
+  {
+    "id": 148,
+    "page": 12,
+    "raw": "fernsehen",
+    "example": "Siehst du viel fern?"
+  },
+  {
+    "id": 149,
+    "page": 12,
+    "raw": "s Fernsehen (Sg.)",
+    "example": "Was gibt es heute im Fernsehen?"
+  },
+  {
+    "id": 150,
+    "page": 12,
+    "raw": "fertig sein",
+    "example": "Ich bin schon fertig."
+  },
+  {
+    "id": 151,
+    "page": 12,
+    "raw": "r Film, -e",
+    "example": "Wie war der Film?"
+  },
+  {
+    "id": 152,
+    "page": 12,
+    "raw": "finden",
+    "example": "Ich kann die Zeitung nicht finden./ Ich finde deinen Pullover schön."
+  },
+  {
+    "id": 153,
+    "page": 12,
+    "raw": "r Fisch, -e",
+    "example": "Ich mag keinen Fisch."
+  },
+  {
+    "id": 154,
+    "page": 12,
+    "raw": "e Flasche, -n",
+    "example": "Bitte eine Flasche Mineralwasser."
+  },
+  {
+    "id": 155,
+    "page": 12,
+    "raw": "s Fleisch (Sg.)",
+    "example": "Ich esse kein Fleisch."
+  },
+  {
+    "id": 156,
+    "page": 12,
+    "raw": "fliegen",
+    "example": "Wir fliegen nach Athen."
+  },
+  {
+    "id": 157,
+    "page": 12,
+    "raw": "r Flughafen, ä, -",
+    "example": "Wir müssen um sieben Uhr am Flughafen sein."
+  },
+  {
+    "id": 158,
+    "page": 12,
+    "raw": "s Flugzeug, -e",
+    "example": "Im Flugzeug hatte meine Mutter Angst."
+  },
+  {
+    "id": 159,
+    "page": 12,
+    "raw": "r Fluss, ü, -e",
+    "example": "Der Rhein ist ein großer Fluss."
+  },
+  {
+    "id": 160,
+    "page": 12,
+    "raw": "s Foto, -s",
+    "example": "Auf dem Foto bin ich mit meinem Hund."
+  },
+  {
+    "id": 161,
+    "page": 12,
+    "raw": "r Fotoapparat, -e",
+    "example": "Sie hat einen teuren Fotoapparat."
+  },
+  {
+    "id": 162,
+    "page": 12,
+    "raw": "fragen",
+    "example": "Ich möchte etwas fragen."
+  },
+  {
+    "id": 163,
+    "page": 12,
+    "raw": "e Frage, -n",
+    "example": "Wiederholen Sie bitte die Frage."
+  },
+  {
+    "id": 164,
+    "page": 12,
+    "raw": "e Frau, -en",
+    "example": "Siehst du die Frau dort? Das ist Frau Bergner."
+  },
+  {
+    "id": 165,
+    "page": 12,
+    "raw": "frei",
+    "example": "Ist der Platz frei?"
+  },
+  {
+    "id": 166,
+    "page": 12,
+    "raw": "r Freund, -e",
+    "example": "Mein bester Freund heißt Ivan."
+  },
+  {
+    "id": 167,
+    "page": 12,
+    "raw": "e Freundin, -nen",
+    "example": "Ich habe viele Freundinnen."
+  },
+  {
+    "id": 168,
+    "page": 12,
+    "raw": "freundlich",
+    "example": "Der Schuldirektor war sehr freundlich."
+  },
+  {
+    "id": 169,
+    "page": 12,
+    "raw": "froh",
+    "example": "Frohe Weihnachten!"
+  },
+  {
+    "id": 170,
+    "page": 12,
+    "raw": "früh",
+    "example": "Wir stehen immer früh auf."
+  },
+  {
+    "id": 171,
+    "page": 12,
+    "raw": "s Frühstück (Sg.)",
+    "example": "Zum Frühstück trinke ich Milch."
+  },
+  {
+    "id": 172,
+    "page": 12,
+    "raw": "frühstücken",
+    "example": "Wir frühstücken nicht zusammen."
+  },
+  {
+    "id": 173,
+    "page": 12,
+    "raw": "für",
+    "example": "Ich kaufe einen Comic für meine Schwester."
+  },
+  {
+    "id": 174,
+    "page": 12,
+    "raw": "r Fuß, ü, -e",
+    "example": "Mein Fuß tut weh./Wir gehen zu Fuß."
+  },
+  {
+    "id": 175,
+    "page": 12,
+    "raw": "r Fußball, ä, -e",
+    "example": "Am Nachmittag spielen wir Fußball."
+  },
+  {
+    "id": 176,
+    "page": 13,
+    "raw": "r Garten, ä, -",
+    "example": "Wir suchen ein Haus mit Garten."
+  },
+  {
+    "id": 177,
+    "page": 13,
+    "raw": "geben",
+    "example": "Geben Sie mir bitte zwei Fahrkarten./ Was gibt es heute im Fernsehen?/ Gibt es hier auch ein Theater?"
+  },
+  {
+    "id": 178,
+    "page": 13,
+    "raw": "geboren",
+    "example": "Wo bist du geboren?"
+  },
+  {
+    "id": 179,
+    "page": 13,
+    "raw": "r Geburtstag, -e",
+    "example": "Heute ist mein Geburtstag."
+  },
+  {
+    "id": 180,
+    "page": 13,
+    "raw": "gefallen",
+    "example": "Das gefällt mir nicht."
+  },
+  {
+    "id": 181,
+    "page": 13,
+    "raw": "gehen",
+    "example": "Wohin wollt ihr gehen?/Wie geht es dir?"
+  },
+  {
+    "id": 182,
+    "page": 13,
+    "raw": "s Geld (Sg.)",
+    "example": "Ich habe nicht genug Geld."
+  },
+  {
+    "id": 183,
+    "page": 13,
+    "raw": "s Gemüse (Sg.)",
+    "example": "Ich esse sehr gern Gemüse."
+  },
+  {
+    "id": 184,
+    "page": 13,
+    "raw": "gemütlich",
+    "example": "Mein Zimmer ist gemütlich."
+  },
+  {
+    "id": 185,
+    "page": 13,
+    "raw": "genug",
+    "example": "Das ist genug."
+  },
+  {
+    "id": 186,
+    "page": 13,
+    "raw": "s Gepäck (Sg.)",
+    "example": "Das ist nicht mein Gepäck."
+  },
+  {
+    "id": 187,
+    "page": 13,
+    "raw": "gerade",
+    "example": "Was machst du gerade?"
+  },
+  {
+    "id": 188,
+    "page": 13,
+    "raw": "geradeaus",
+    "example": "Gehen Sie hier geradeaus, dann sehen Sie das Rathaus."
+  },
+  {
+    "id": 189,
+    "page": 13,
+    "raw": "gern",
+    "example": "Wir sehen gern Krimis."
+  },
+  {
+    "id": 190,
+    "page": 13,
+    "raw": "s Geschäft, -e",
+    "example": "Meine Mutter wartet vor dem Geschäft."
+  },
+  {
+    "id": 191,
+    "page": 13,
+    "raw": "s Geschenk, -e",
+    "example": "Hier ist ein Geschenk für dich."
+  },
+  {
+    "id": 192,
+    "page": 13,
+    "raw": "e Geschichte, -n",
+    "example": "Kennst du die Geschichte?/In Geschichte hat er eine Eins."
+  },
+  {
+    "id": 193,
+    "page": 13,
+    "raw": "geschlossen sein",
+    "example": "Die Apotheke ist heute geschlossen."
+  },
+  {
+    "id": 194,
+    "page": 13,
+    "raw": "gestern",
+    "example": "Gestern war Sonntag."
+  },
+  {
+    "id": 195,
+    "page": 13,
+    "raw": "gewinnen",
+    "example": "Man kann eine Reise gewinnen."
+  },
+  {
+    "id": 196,
+    "page": 13,
+    "raw": "s Glas, ä, -er",
+    "example": "Bitte ein Glas Cola."
+  },
+  {
+    "id": 197,
+    "page": 13,
+    "raw": "glauben",
+    "example": "Ich glaube, Karin spricht sehr gut Englisch."
+  },
+  {
+    "id": 198,
+    "page": 13,
+    "raw": "gleich",
+    "example": "Er kommt gleich./Das ist mir gleich."
+  },
+  {
+    "id": 199,
+    "page": 13,
+    "raw": "s Gleis, -e",
+    "example": "Der Zug kommt auf Gleis vier an."
+  },
+  {
+    "id": 200,
+    "page": 13,
+    "raw": "s Glück (Sg.)",
+    "example": "Viel Glück!/Hoffentlich hast du Glück."
+  },
+  {
+    "id": 201,
+    "page": 13,
+    "raw": "glücklich",
+    "example": "Ich war in Deutschland sehr glücklich."
+  },
+  {
+    "id": 202,
+    "page": 13,
+    "raw": "r Glückwunsch, ü, -e",
+    "example": "Herzlichen Glückwunsch!"
+  },
+  {
+    "id": 203,
+    "page": 13,
+    "raw": "groß",
+    "example": "Unser Haus ist groß."
+  },
+  {
+    "id": 204,
+    "page": 13,
+    "raw": "e Großeltern (Pl.)",
+    "example": "Meine Großeltern wohnen nicht bei uns."
+  },
+  {
+    "id": 205,
+    "page": 13,
+    "raw": "r Gruß, ü, -e",
+    "example": "Viele Grüße von Angelika."
+  },
+  {
+    "id": 206,
+    "page": 13,
+    "raw": "gut",
+    "example": "Das Essen ist hier immer sehr gut./Ich finde deine Idee nicht so gut."
+  },
+  {
+    "id": 207,
+    "page": 13,
+    "raw": "s Haar, -e",
+    "example": "Sie hat lange Haare."
+  },
+  {
+    "id": 208,
+    "page": 13,
+    "raw": "haben",
+    "example": "Wir haben einen Hund und zwei Katzen."
+  },
+  {
+    "id": 209,
+    "page": 13,
+    "raw": "hallo",
+    "example": "Hallo! Bist du Michael Schmidt?"
+  },
+  {
+    "id": 210,
+    "page": 13,
+    "raw": "r Hals, ä, -e",
+    "example": "Mein Hals tut so weh!"
+  },
+  {
+    "id": 211,
+    "page": 13,
+    "raw": "halten",
+    "example": "Alle Busse halten hier."
+  },
+  {
+    "id": 212,
+    "page": 13,
+    "raw": "e Haltestelle, -n",
+    "example": "Da ist die Haltestelle."
+  },
+  {
+    "id": 213,
+    "page": 13,
+    "raw": "s Handy, -s",
+    "example": "Du kannst mit dem Handy telefonieren."
+  },
+  {
+    "id": 214,
+    "page": 13,
+    "raw": "s Haus, ä, -er",
+    "example": "Ich bin zu Haus./Ich gehe nach Haus./ Da ist unser Haus."
+  },
+  {
+    "id": 215,
+    "page": 13,
+    "raw": "e Hausaufgabe, -n",
+    "example": "Wir machen zusammen Hausaufgaben."
+  },
+  {
+    "id": 216,
+    "page": 13,
+    "raw": "s Heft, -e",
+    "example": "Schreibt die Übung ins Heft."
+  },
+  {
+    "id": 217,
+    "page": 14,
+    "raw": "heiraten",
+    "example": "Nächste Woche heiratet meine Schwester."
+  },
+  {
+    "id": 218,
+    "page": 14,
+    "raw": "heißen",
+    "example": "Wie heißt du?"
+  },
+  {
+    "id": 219,
+    "page": 14,
+    "raw": "helfen",
+    "example": "Hilf mir bitte!"
+  },
+  {
+    "id": 220,
+    "page": 14,
+    "raw": "r Herr; -en",
+    "example": "Sind Sie Herr Braunmüller?"
+  },
+  {
+    "id": 221,
+    "page": 14,
+    "raw": "herzlich",
+    "example": "Herzliche Grüße von Michael."
+  },
+  {
+    "id": 222,
+    "page": 14,
+    "raw": "heute",
+    "example": "Heute kommt meine Freundin aus Italien."
+  },
+  {
+    "id": 223,
+    "page": 14,
+    "raw": "hier",
+    "example": "Wir wohnen hier."
+  },
+  {
+    "id": 224,
+    "page": 14,
+    "raw": "s Hobby, -s",
+    "example": "Meine Hobbys sind Lesen und Tanzen."
+  },
+  {
+    "id": 225,
+    "page": 14,
+    "raw": "e Hochzeit, -en",
+    "example": "Die Hochzeit war sehr langweilig."
+  },
+  {
+    "id": 226,
+    "page": 14,
+    "raw": "hoffen",
+    "example": "Ich hoffe, du antwortest bald."
+  },
+  {
+    "id": 227,
+    "page": 14,
+    "raw": "hoffentlich",
+    "example": "Hoffentlich kommt er mit."
+  },
+  {
+    "id": 228,
+    "page": 14,
+    "raw": "hören",
+    "example": "Hörst du gern Musik?"
+  },
+  {
+    "id": 229,
+    "page": 14,
+    "raw": "hübsch",
+    "example": "Ich finde sie wirklich hübsch."
+  },
+  {
+    "id": 230,
+    "page": 14,
+    "raw": "r Hund, -e",
+    "example": "Hast du einen Hund?"
+  },
+  {
+    "id": 231,
+    "page": 14,
+    "raw": "r Hunger (Sg.)",
+    "example": "Wir haben Hunger."
+  },
+  {
+    "id": 232,
+    "page": 14,
+    "raw": "ich",
+    "example": "Ich wohne in Berlin. (vergl. Grammatik)"
+  },
+  {
+    "id": 233,
+    "page": 14,
+    "raw": "e Idee, -n",
+    "example": "Das ist eine tolle Idee."
+  },
+  {
+    "id": 234,
+    "page": 14,
+    "raw": "Ihr, -e",
+    "example": "Ist das Ihr Hund/Ihre Katze?"
+  },
+  {
+    "id": 235,
+    "page": 14,
+    "raw": "immer",
+    "example": "Mathe ist immer so langweilig."
+  },
+  {
+    "id": 236,
+    "page": 14,
+    "raw": "in",
+    "example": "In Spanien/in der Stadt/ins Schwimmbad/ in den Wald/in den Ferien/im Sommer"
+  },
+  {
+    "id": 237,
+    "page": 14,
+    "raw": "e Information, -en",
+    "example": "Hier kann man Informationen bekommen."
+  },
+  {
+    "id": 238,
+    "page": 14,
+    "raw": "e Insel, -n",
+    "example": "Rügen ist eine Insel."
+  },
+  {
+    "id": 239,
+    "page": 14,
+    "raw": "interessant",
+    "example": "Das Buch ist interessant."
+  },
+  {
+    "id": 240,
+    "page": 14,
+    "raw": "s Internet (Sg.)",
+    "example": "Wir suchen die Informationen im Internet."
+  },
+  {
+    "id": 241,
+    "page": 14,
+    "raw": "ja",
+    "example": "Kommst du mit? - Ja, gern."
+  },
+  {
+    "id": 242,
+    "page": 14,
+    "raw": "e Jacke, -n",
+    "example": "Du brauchst eine Jacke, es ist kalt."
+  },
+  {
+    "id": 243,
+    "page": 14,
+    "raw": "e Jeans (Pl.)",
+    "example": "Sie trägt heute Jeans und ein Hemd."
+  },
+  {
+    "id": 244,
+    "page": 14,
+    "raw": "jeder,-e, -s",
+    "example": "Wir fahren jeden Sommer nach München."
+  },
+  {
+    "id": 245,
+    "page": 14,
+    "raw": "jetzt",
+    "example": "Das ist jetzt nicht mehr wichtig."
+  },
+  {
+    "id": 246,
+    "page": 14,
+    "raw": "r/e Jugendliche, -n",
+    "example": "Ist das ein Film für Jugendliche?"
+  },
+  {
+    "id": 247,
+    "page": 14,
+    "raw": "jung",
+    "example": "Meine Eltern sind noch jung."
+  },
+  {
+    "id": 248,
+    "page": 14,
+    "raw": "r Junge, -n",
+    "example": "Der Junge ist neu in unserer Klasse."
+  },
+  {
+    "id": 249,
+    "page": 14,
+    "raw": "r Kaffee (Sg.)",
+    "example": "Möchtest du eine Tasse Kaffee?"
+  },
+  {
+    "id": 250,
+    "page": 14,
+    "raw": "r Kakao (Sg.)",
+    "example": "Ich trinke lieber Kakao."
+  },
+  {
+    "id": 251,
+    "page": 14,
+    "raw": "e Kamera, -s",
+    "example": "Ich zeige dir meine neue Digitalkamera."
+  },
+  {
+    "id": 252,
+    "page": 14,
+    "raw": "kalt",
+    "example": "Heute ist es sehr kalt./Mir ist kalt."
+  },
+  {
+    "id": 253,
+    "page": 14,
+    "raw": "kaputt",
+    "example": "Das Radio ist kaputt."
+  },
+  {
+    "id": 254,
+    "page": 14,
+    "raw": "e Karte, -n",
+    "example": "Wir können unsren Freunden eine Karte schicken."
+  },
+  {
+    "id": 255,
+    "page": 14,
+    "raw": "e Kartoffel, -n",
+    "example": "Ich möchte keine Kartoffeln."
+  },
+  {
+    "id": 256,
+    "page": 14,
+    "raw": "r Käse (Sg.)",
+    "example": "Bitte ein Brötchen mit Käse."
+  },
+  {
+    "id": 257,
+    "page": 14,
+    "raw": "e Katze, -n",
+    "example": "Das ist Timmy, meine Katze."
+  },
+  {
+    "id": 258,
+    "page": 14,
+    "raw": "kaufen",
+    "example": "Ich möchte einen CD-Player kaufen."
+  },
+  {
+    "id": 259,
+    "page": 14,
+    "raw": "kein, -e",
+    "example": "Ich habe keine Lust."
+  },
+  {
+    "id": 260,
+    "page": 15,
+    "raw": "kennen",
+    "example": "Kennst du Manuela?"
+  },
+  {
+    "id": 261,
+    "page": 15,
+    "raw": "kennenlernen",
+    "example": "Möchtest du meine Freunde kennenlernen?"
+  },
+  {
+    "id": 262,
+    "page": 15,
+    "raw": "s Kind, -er",
+    "example": "Die Kinder sind noch in der Schule."
+  },
+  {
+    "id": 263,
+    "page": 15,
+    "raw": "s Kino, -s",
+    "example": "Geht ihr ins Kino?"
+  },
+  {
+    "id": 264,
+    "page": 15,
+    "raw": "r Kiosk,-e",
+    "example": "Am Kiosk bekommt man Zeitungen und Eis."
+  },
+  {
+    "id": 265,
+    "page": 15,
+    "raw": "klar",
+    "example": "Können wir das mitnehmen? Na klar!"
+  },
+  {
+    "id": 266,
+    "page": 15,
+    "raw": "e Klasse, -n",
+    "example": "In unserer Klasse sind 25 Teilnehmende."
+  },
+  {
+    "id": 267,
+    "page": 15,
+    "raw": "e Klassenarbeit, -en",
+    "example": "Ich muss lernen, morgen schreiben wir eine Klassenarbeit."
+  },
+  {
+    "id": 268,
+    "page": 15,
+    "raw": "s Klavier, -e",
+    "example": "Spielst du auch Klavier?"
+  },
+  {
+    "id": 269,
+    "page": 15,
+    "raw": "s Kleid, -er",
+    "example": "Das Kleid ist sehr teuer."
+  },
+  {
+    "id": 270,
+    "page": 15,
+    "raw": "klein",
+    "example": "Mein Zimmer ist klein."
+  },
+  {
+    "id": 271,
+    "page": 15,
+    "raw": "kochen",
+    "example": "Mein Vater kocht für uns."
+  },
+  {
+    "id": 272,
+    "page": 15,
+    "raw": "kommen",
+    "example": "Ich komme aus Polen./Warum willst du nicht mitkommen?"
+  },
+  {
+    "id": 273,
+    "page": 15,
+    "raw": "können",
+    "example": "Er kann gut kochen."
+  },
+  {
+    "id": 274,
+    "page": 15,
+    "raw": "r Kopf, ö, -e",
+    "example": "Mein Kopf tut weh."
+  },
+  {
+    "id": 275,
+    "page": 15,
+    "raw": "kosten",
+    "example": "Das kostet 20 Euro."
+  },
+  {
+    "id": 276,
+    "page": 15,
+    "raw": "krank",
+    "example": "Ich war gestern krank."
+  },
+  {
+    "id": 277,
+    "page": 15,
+    "raw": "s Krankenhaus, ä, -er",
+    "example": "Meine Freundin ist im Krankenhaus."
+  },
+  {
+    "id": 278,
+    "page": 15,
+    "raw": "r Kuchen, -",
+    "example": "Ich mag keinen Kuchen."
+  },
+  {
+    "id": 279,
+    "page": 15,
+    "raw": "e Küche, -n",
+    "example": "Wir frühstücken in der Küche."
+  },
+  {
+    "id": 280,
+    "page": 15,
+    "raw": "r Kühlschrank, ä, -e",
+    "example": "Im Kühlschrank ist Limonade."
+  },
+  {
+    "id": 281,
+    "page": 15,
+    "raw": "r Kugelschreiber, -",
+    "example": "Wo ist mein Kugelschreiber?"
+  },
+  {
+    "id": 282,
+    "page": 15,
+    "raw": "r Kurs, -e",
+    "example": "In den Ferien mache ich einen Englischkurs."
+  },
+  {
+    "id": 283,
+    "page": 15,
+    "raw": "kurz",
+    "example": "Seine Haare sind kurz."
+  },
+  {
+    "id": 284,
+    "page": 15,
+    "raw": "lachen",
+    "example": "Lisa lacht immer viel."
+  },
+  {
+    "id": 285,
+    "page": 15,
+    "raw": "e Lampe, -n",
+    "example": "Die Lampe ist kaputt."
+  },
+  {
+    "id": 286,
+    "page": 15,
+    "raw": "s Land, ä, -er",
+    "example": "Österreich ist ein kleines Land."
+  },
+  {
+    "id": 287,
+    "page": 15,
+    "raw": "lang",
+    "example": "Das Kleid ist zu kurz."
+  },
+  {
+    "id": 288,
+    "page": 15,
+    "raw": "lange",
+    "example": "Wartest du schon lange?/Ich bin schon lange hier."
+  },
+  {
+    "id": 289,
+    "page": 15,
+    "raw": "langsam",
+    "example": "Sprich langsam, ich verstehe dich nicht."
+  },
+  {
+    "id": 290,
+    "page": 15,
+    "raw": "langweilig",
+    "example": "Physik ist langweilig."
+  },
+  {
+    "id": 291,
+    "page": 15,
+    "raw": "lassen",
+    "example": "Ihr könnt die Bücher zu Hause lassen."
+  },
+  {
+    "id": 292,
+    "page": 15,
+    "raw": "laufen",
+    "example": "Wir laufen schnell nach Hause."
+  },
+  {
+    "id": 293,
+    "page": 15,
+    "raw": "leben",
+    "example": "Er lebt in Berlin."
+  },
+  {
+    "id": 294,
+    "page": 15,
+    "raw": "leicht",
+    "example": "Die Hausaufgaben sind leicht."
+  },
+  {
+    "id": 295,
+    "page": 15,
+    "raw": "leid",
+    "example": "Es tut mir leid."
+  },
+  {
+    "id": 296,
+    "page": 15,
+    "raw": "leider",
+    "example": "Ich kann leider nicht kommen."
+  },
+  {
+    "id": 297,
+    "page": 15,
+    "raw": "lernen",
+    "example": "Ich komme nicht mit, ich muss noch Vokabeln lernen./ Karin lernt Tennis spielen."
+  },
+  {
+    "id": 298,
+    "page": 15,
+    "raw": "lesen",
+    "example": "Ich lese viel."
+  },
+  {
+    "id": 299,
+    "page": 15,
+    "raw": "e Leute (Pl.)",
+    "example": "In unserem Haus wohnen viele Leute."
+  },
+  {
+    "id": 300,
+    "page": 15,
+    "raw": "lieb",
+    "example": "Lieber Franz!/Meine Lehrerin ist sehr lieb."
+  },
+  {
+    "id": 301,
+    "page": 15,
+    "raw": "lieben",
+    "example": "Ich liebe meinen Hund Toby."
+  },
+  {
+    "id": 302,
+    "page": 15,
+    "raw": "lieber",
+    "example": "Ich möchte lieber ein Eis."
+  },
+  {
+    "id": 303,
+    "page": 15,
+    "raw": "Lieblings-",
+    "example": "Mein Lieblingsfach ist Sozialkunde."
+  },
+  {
+    "id": 304,
+    "page": 16,
+    "raw": "links",
+    "example": "Gehen Sie hier geradeaus, dann sehen Sie links den Bahnhof."
+  },
+  {
+    "id": 305,
+    "page": 16,
+    "raw": "e Lust (Sg.)",
+    "example": "Ich habe keine Lust."
+  },
+  {
+    "id": 306,
+    "page": 16,
+    "raw": "lustig",
+    "example": "Jan ist nett und lustig."
+  },
+  {
+    "id": 307,
+    "page": 16,
+    "raw": "machen",
+    "example": "Am Samstag machen wir einen Ausflug./ Das macht nichts./Das macht 4,00 Euro."
+  },
+  {
+    "id": 308,
+    "page": 16,
+    "raw": "s Mädchen, -",
+    "example": "Die Mädchen spielen auch Fußball."
+  },
+  {
+    "id": 309,
+    "page": 16,
+    "raw": "e Mail, -s",
+    "example": "Danke für deine Mail."
+  },
+  {
+    "id": 310,
+    "page": 16,
+    "raw": "s Mal, -e",
+    "example": "Ich war zwei Mal in England./Bis zum nächsten Mal!"
+  },
+  {
+    "id": 311,
+    "page": 16,
+    "raw": "man",
+    "example": "Hier kann man auch Eis essen."
+  },
+  {
+    "id": 312,
+    "page": 16,
+    "raw": "manchmal",
+    "example": "Ich bin manchmal sehr traurig."
+  },
+  {
+    "id": 313,
+    "page": 16,
+    "raw": "r Mann, ä, -er",
+    "example": "Ein Mann geht mit seinem Hund spazieren."
+  },
+  {
+    "id": 314,
+    "page": 16,
+    "raw": "r Mantel, ä, -",
+    "example": "Er trägt einen Mantel."
+  },
+  {
+    "id": 315,
+    "page": 16,
+    "raw": "r Markt, ä, -e",
+    "example": "Heute ist hier Markt."
+  },
+  {
+    "id": 316,
+    "page": 16,
+    "raw": "r Marktplatz, ä, -e",
+    "example": "Der Bus fährt zum Marktplatz."
+  },
+  {
+    "id": 317,
+    "page": 16,
+    "raw": "e Marmelade, -n",
+    "example": "Ich esse Brot mit Marmelade."
+  },
+  {
+    "id": 318,
+    "page": 16,
+    "raw": "mehr",
+    "example": "Ich habe kein Geld mehr./Du musst mir noch mehr erzählen."
+  },
+  {
+    "id": 319,
+    "page": 16,
+    "raw": "mein, -e",
+    "example": "Meine Freundin heißt Gaby. (vergl. Grammatik)"
+  },
+  {
+    "id": 320,
+    "page": 16,
+    "raw": "e Milch (Sg.)",
+    "example": "Ich mag keine Milch."
+  },
+  {
+    "id": 321,
+    "page": 16,
+    "raw": "mindestens",
+    "example": "Schreibe mindestens 30 Wörter./ Das kostet mindestens 10 Euro."
+  },
+  {
+    "id": 322,
+    "page": 16,
+    "raw": "s Mineralwasser, ä, -",
+    "example": "Haben Sie auch Mineralwasser?"
+  },
+  {
+    "id": 323,
+    "page": 16,
+    "raw": "mit",
+    "example": "Ich spiele mit Andrea./Er fährt mit dem Bus."
+  },
+  {
+    "id": 324,
+    "page": 16,
+    "raw": "mitbringen",
+    "example": "Was bringst du mit?"
+  },
+  {
+    "id": 325,
+    "page": 16,
+    "raw": "mitkommen",
+    "example": "Kommst du auch mit?"
+  },
+  {
+    "id": 326,
+    "page": 16,
+    "raw": "mitmachen",
+    "example": "Komm, mach mit!"
+  },
+  {
+    "id": 327,
+    "page": 16,
+    "raw": "mitnehmen",
+    "example": "Was nehmen wir zu der Party mit?"
+  },
+  {
+    "id": 328,
+    "page": 16,
+    "raw": "mögen",
+    "example": "Ich mag gern Spaghetti und Fleisch."
+  },
+  {
+    "id": 329,
+    "page": 16,
+    "raw": "möglich",
+    "example": "Ich kann nicht kommen, es ist leider nicht möglich."
+  },
+  {
+    "id": 330,
+    "page": 16,
+    "raw": "morgen",
+    "example": "Wir gehen morgen ins Schwimmbad."
+  },
+  {
+    "id": 331,
+    "page": 16,
+    "raw": "müde",
+    "example": "Bist du sehr müde?"
+  },
+  {
+    "id": 332,
+    "page": 16,
+    "raw": "e Musik (Sg.)",
+    "example": "Ich höre gern Disco-Musik."
+  },
+  {
+    "id": 333,
+    "page": 16,
+    "raw": "müssen",
+    "example": "Mein Zimmer muss ich allein aufräumen."
+  },
+  {
+    "id": 334,
+    "page": 16,
+    "raw": "nach",
+    "example": "Sie fährt mit dem Bus nach Berlin."
+  },
+  {
+    "id": 335,
+    "page": 16,
+    "raw": "e Nachricht, -en",
+    "example": "Du hörst die Nachricht noch einmal./ Das ist eine gute Nachricht."
+  },
+  {
+    "id": 336,
+    "page": 16,
+    "raw": "r, e, s nächste",
+    "example": "Nächsten Monat bekommen wir Zeugnisse."
+  },
+  {
+    "id": 337,
+    "page": 16,
+    "raw": "r Name, -n",
+    "example": "Mein Name ist Peter Niemöller."
+  },
+  {
+    "id": 338,
+    "page": 16,
+    "raw": "nehmen",
+    "example": "Nehmen Sie den Bus zum Marktplatz."
+  },
+  {
+    "id": 339,
+    "page": 16,
+    "raw": "nein",
+    "example": "Kommst du mit? - Nein, leider nicht."
+  },
+  {
+    "id": 340,
+    "page": 16,
+    "raw": "nett",
+    "example": "Ich finde, sie ist nett und lustig."
+  },
+  {
+    "id": 341,
+    "page": 16,
+    "raw": "neu",
+    "example": "Ist der Computer neu?"
+  },
+  {
+    "id": 342,
+    "page": 16,
+    "raw": "nicht",
+    "example": "Ich kann dich nicht verstehen."
+  },
+  {
+    "id": 343,
+    "page": 16,
+    "raw": "nichts",
+    "example": "Ich möchte nichts essen./Das macht nichts."
+  },
+  {
+    "id": 344,
+    "page": 16,
+    "raw": "nie",
+    "example": "Ich war noch nie in Frankreich."
+  },
+  {
+    "id": 345,
+    "page": 17,
+    "raw": "niemand",
+    "example": "Kann mir niemand helfen?"
+  },
+  {
+    "id": 346,
+    "page": 17,
+    "raw": "noch",
+    "example": "Ich muss noch Hausaufgaben machen."
+  },
+  {
+    "id": 347,
+    "page": 17,
+    "raw": "normal",
+    "example": "Eine ganz normale Situation."
+  },
+  {
+    "id": 348,
+    "page": 17,
+    "raw": "e Note, -n",
+    "example": "Hast du gute Noten in Englisch?"
+  },
+  {
+    "id": 349,
+    "page": 17,
+    "raw": "e Nummer, -n",
+    "example": "Bitte, sag mir deine Telefonnummer./ Welche Hausnummer hast du?"
+  },
+  {
+    "id": 350,
+    "page": 17,
+    "raw": "nur",
+    "example": "Ich möchte nur ein Glas Wasser."
+  },
+  {
+    "id": 351,
+    "page": 17,
+    "raw": "s Obst (Sg.)",
+    "example": "Wir essen immer viel Obst."
+  },
+  {
+    "id": 352,
+    "page": 17,
+    "raw": "oder",
+    "example": "Trinkst du Tee oder Kaffee?"
+  },
+  {
+    "id": 353,
+    "page": 17,
+    "raw": "offen",
+    "example": "Jetzt ist die Tür offen."
+  },
+  {
+    "id": 354,
+    "page": 17,
+    "raw": "oft",
+    "example": "Wir gehen oft im Park spazieren."
+  },
+  {
+    "id": 355,
+    "page": 17,
+    "raw": "ohne",
+    "example": "Ein Sonntag ohne meine Freunde ist langweilig."
+  },
+  {
+    "id": 356,
+    "page": 17,
+    "raw": "r Ohrring, -e",
+    "example": "Sie trägt einen kleinen Ohrring."
+  },
+  {
+    "id": 357,
+    "page": 17,
+    "raw": "e Ordnung, -en",
+    "example": "Das ist in Ordnung./Kannst du hier Ordnung machen?"
+  },
+  {
+    "id": 358,
+    "page": 17,
+    "raw": "s Paket, -e",
+    "example": "Ist das Paket für mich?"
+  },
+  {
+    "id": 359,
+    "page": 17,
+    "raw": "r Park, -s",
+    "example": "Wir gehen in den Park. ."
+  },
+  {
+    "id": 360,
+    "page": 17,
+    "raw": "passieren",
+    "example": "Was passiert hier?"
+  },
+  {
+    "id": 361,
+    "page": 17,
+    "raw": "e Pause, -n",
+    "example": "Jetzt machen wir eine Pause."
+  },
+  {
+    "id": 362,
+    "page": 17,
+    "raw": "s Pferd, -e",
+    "example": "Das Pferd ist schon alt."
+  },
+  {
+    "id": 363,
+    "page": 17,
+    "raw": "e Pizza, -en",
+    "example": "Heute gibt es bei uns Pizza mit Tomaten und Käse."
+  },
+  {
+    "id": 364,
+    "page": 17,
+    "raw": "r Platz, ä, -e",
+    "example": "Das ist mein Platz./In meiner Wohnung ist wenig Platz./Ist der Platz noch frei?"
+  },
+  {
+    "id": 365,
+    "page": 17,
+    "raw": "e Post (Sg.)",
+    "example": "Ich gehe zur Post, kommst du mit?"
+  },
+  {
+    "id": 366,
+    "page": 17,
+    "raw": "s Poster, -",
+    "example": "In meinem Zimmer sind viele Poster."
+  },
+  {
+    "id": 367,
+    "page": 17,
+    "raw": "e Postkarte, -n",
+    "example": "Wir schreiben ihm eine Postkarte."
+  },
+  {
+    "id": 368,
+    "page": 17,
+    "raw": "s Problem, -e",
+    "example": "Hast du Probleme?"
+  },
+  {
+    "id": 369,
+    "page": 17,
+    "raw": "r Pullover, -",
+    "example": "Du brauchst keinen Pullover, es ist warm."
+  },
+  {
+    "id": 370,
+    "page": 17,
+    "raw": "pünktlich",
+    "example": "Kommt bitte pünktlich!"
+  },
+  {
+    "id": 371,
+    "page": 17,
+    "raw": "r Quatsch (Sg.)",
+    "example": "Ich finde, das ist Quatsch!"
+  },
+  {
+    "id": 372,
+    "page": 17,
+    "raw": "s Quiz (Sg.)",
+    "example": "Das ist ein Quiz für Kinder."
+  },
+  {
+    "id": 373,
+    "page": 17,
+    "raw": "s Rad, ä, -er",
+    "example": "Ich fahre mit dem Rad in die Schule."
+  },
+  {
+    "id": 374,
+    "page": 17,
+    "raw": "(s Fahrrad)",
+    "example": ""
+  },
+  {
+    "id": 375,
+    "page": 17,
+    "raw": "r Radiergummi, -s",
+    "example": "Gibst du mir deinen Radiergummi?"
+  },
+  {
+    "id": 376,
+    "page": 17,
+    "raw": "s Radio, -s",
+    "example": "Ich habe ein neues Radio."
+  },
+  {
+    "id": 377,
+    "page": 17,
+    "raw": "raten",
+    "example": "Das ist ein Spiel, man muss die Städte raten."
+  },
+  {
+    "id": 378,
+    "page": 17,
+    "raw": "s Rätsel, -",
+    "example": "Ich finde das Rätsel zu schwer."
+  },
+  {
+    "id": 379,
+    "page": 17,
+    "raw": "recht haben",
+    "example": "Du hast recht."
+  },
+  {
+    "id": 380,
+    "page": 17,
+    "raw": "rechts",
+    "example": "Hier rechts ist unsere Schule."
+  },
+  {
+    "id": 381,
+    "page": 17,
+    "raw": "r Regen (Sg.)",
+    "example": "Ich mag den Regen nicht."
+  },
+  {
+    "id": 382,
+    "page": 17,
+    "raw": "regnen",
+    "example": "Es regnet oft bei uns."
+  },
+  {
+    "id": 383,
+    "page": 17,
+    "raw": "e Reise, -n",
+    "example": "Wir machen eine Reise."
+  },
+  {
+    "id": 384,
+    "page": 17,
+    "raw": "reiten",
+    "example": "Reiten ist mein Hobby."
+  },
+  {
+    "id": 385,
+    "page": 18,
+    "raw": "reparieren",
+    "example": "Mein Vater kann das Fahrrad reparieren."
+  },
+  {
+    "id": 386,
+    "page": 18,
+    "raw": "s Restaurant, s",
+    "example": "Wir essen heute im Restaurant."
+  },
+  {
+    "id": 387,
+    "page": 18,
+    "raw": "richtig",
+    "example": "Die Antwort ist nicht richtig."
+  },
+  {
+    "id": 388,
+    "page": 18,
+    "raw": "r Ring, -e",
+    "example": "Sie trägt viele Ringe."
+  },
+  {
+    "id": 389,
+    "page": 18,
+    "raw": "r Rucksack, ä, -e",
+    "example": "Der Rucksack für die Schule ist fertig."
+  },
+  {
+    "id": 390,
+    "page": 18,
+    "raw": "ruhig",
+    "example": "Seid jetzt bitte ruhig!"
+  },
+  {
+    "id": 391,
+    "page": 18,
+    "raw": "e Sache, -n",
+    "example": "Wo sind meine Schulsachen?/Das ist eine tolle Sache."
+  },
+  {
+    "id": 392,
+    "page": 18,
+    "raw": "r Saft, ä, -e",
+    "example": "Möchtest du Wasser oder Saft?"
+  },
+  {
+    "id": 393,
+    "page": 18,
+    "raw": "sagen",
+    "example": "Eva sagt, sie kommt heute nicht."
+  },
+  {
+    "id": 394,
+    "page": 18,
+    "raw": "r Salat, -e",
+    "example": "Am Abend gibt es immer Salat."
+  },
+  {
+    "id": 395,
+    "page": 18,
+    "raw": "schade",
+    "example": "Du kannst nicht kommen? Das ist schade!"
+  },
+  {
+    "id": 396,
+    "page": 18,
+    "raw": "schenken",
+    "example": "Ich möchte Anna einen Pullover schenken."
+  },
+  {
+    "id": 397,
+    "page": 18,
+    "raw": "s Schiff, -e",
+    "example": "Sie fahren mit dem Schiff."
+  },
+  {
+    "id": 398,
+    "page": 18,
+    "raw": "schlafen",
+    "example": "Wo kann ich schlafen?"
+  },
+  {
+    "id": 399,
+    "page": 18,
+    "raw": "schlecht",
+    "example": "Mir ist so schlecht./Das Essen hier ist nicht schlecht."
+  },
+  {
+    "id": 400,
+    "page": 18,
+    "raw": "schmecken",
+    "example": "Wie schmeckt der Hamburger?"
+  },
+  {
+    "id": 401,
+    "page": 18,
+    "raw": "r Schmerz, -en",
+    "example": "Ich habe Bauchschmerzen."
+  },
+  {
+    "id": 402,
+    "page": 18,
+    "raw": "schnell",
+    "example": "Mach schnell!"
+  },
+  {
+    "id": 403,
+    "page": 18,
+    "raw": "e Schokolade (Sg.)",
+    "example": "Ich esse keine Schokolade."
+  },
+  {
+    "id": 404,
+    "page": 18,
+    "raw": "schon",
+    "example": "Ich habe schon sechs Computerspiele."
+  },
+  {
+    "id": 405,
+    "page": 18,
+    "raw": "schön",
+    "example": "Mein Zimmer ist sehr schön und gemütlich."
+  },
+  {
+    "id": 406,
+    "page": 18,
+    "raw": "schreiben",
+    "example": "Erika schreibt mir jeden Tag."
+  },
+  {
+    "id": 407,
+    "page": 18,
+    "raw": "schwer",
+    "example": "Ich finde die Hausaufgaben sehr schwer."
+  },
+  {
+    "id": 408,
+    "page": 18,
+    "raw": "s Schwimmbad, ä, -er",
+    "example": "Im Sommer gehen wir oft ins Schwimmbad."
+  },
+  {
+    "id": 409,
+    "page": 18,
+    "raw": "schwimmen",
+    "example": "Ich kann gut schwimmen."
+  },
+  {
+    "id": 410,
+    "page": 18,
+    "raw": "r See, -n",
+    "example": "Der See ist sehr groß./Wir wohnen am See./ Wir fahren zum Ammersee."
+  },
+  {
+    "id": 411,
+    "page": 18,
+    "raw": "sehen",
+    "example": "Siehst du das große Haus? Da wohne ich."
+  },
+  {
+    "id": 412,
+    "page": 18,
+    "raw": "sehr",
+    "example": "Ich liebe ihn sehr./Das ist sehr wichtig."
+  },
+  {
+    "id": 413,
+    "page": 18,
+    "raw": "sein",
+    "example": "Ich bin 13 Jahre alt./Das ist mein Bruder./ Er ist Student./ Die Kinder sind im Garten."
+  },
+  {
+    "id": 414,
+    "page": 18,
+    "raw": "sein, -e",
+    "example": "Er mag seinen Bruder sehr gern. (vergl. Grammatik)"
+  },
+  {
+    "id": 415,
+    "page": 18,
+    "raw": "e Seite, -n",
+    "example": "Das steht auf Seite 3."
+  },
+  {
+    "id": 416,
+    "page": 18,
+    "raw": "sicher",
+    "example": "Du bist sicher gut in der Schule."
+  },
+  {
+    "id": 417,
+    "page": 18,
+    "raw": "sie",
+    "example": "Das ist Frau Meyer, sie wohnt hier."
+  },
+  {
+    "id": 418,
+    "page": 18,
+    "raw": "Sie",
+    "example": "Sind Sie der neue Lehrer?/Wie geht es Ihnen? (vergl. Grammatik)"
+  },
+  {
+    "id": 419,
+    "page": 18,
+    "raw": "so",
+    "example": "Ich mache das nicht so./Das schmeckt so gut./ Sie ist so alt wie ich."
+  },
+  {
+    "id": 420,
+    "page": 18,
+    "raw": "sofort",
+    "example": "Warte, ich komme sofort!"
+  },
+  {
+    "id": 421,
+    "page": 18,
+    "raw": "r Spaß (Sg.)",
+    "example": "Wir haben immer viel Spaß zusammen./Viel Spaß!"
+  },
+  {
+    "id": 422,
+    "page": 18,
+    "raw": "spät",
+    "example": "Mach schnell, es ist spät!/Ich komme zu spät./ Wie spät ist es?"
+  },
+  {
+    "id": 423,
+    "page": 18,
+    "raw": "später",
+    "example": "Ich mache die Hausaufgaben später."
+  },
+  {
+    "id": 424,
+    "page": 18,
+    "raw": "spazieren gehen",
+    "example": "Wollen wir spazieren gehen?"
+  },
+  {
+    "id": 425,
+    "page": 18,
+    "raw": "s Spiel, -e",
+    "example": "Ich kenne ein neues Spiel."
+  },
+  {
+    "id": 426,
+    "page": 18,
+    "raw": "spielen",
+    "example": "Willst du mit uns spielen?"
+  },
+  {
+    "id": 427,
+    "page": 18,
+    "raw": "r Spielplatz, ä, -e",
+    "example": "Sie ist mit Ben auf dem Spielplatz."
+  },
+  {
+    "id": 428,
+    "page": 19,
+    "raw": "r Sport (Sg.)",
+    "example": "Sport ist mein Hobby."
+  },
+  {
+    "id": 429,
+    "page": 19,
+    "raw": "e Sprache, -n",
+    "example": "Er spricht fünf Sprachen."
+  },
+  {
+    "id": 430,
+    "page": 19,
+    "raw": "sprechen",
+    "example": "Sie spricht mit dem Lehrer."
+  },
+  {
+    "id": 431,
+    "page": 19,
+    "raw": "e Stadt, ä, -e",
+    "example": "Unsere Stadt ist nicht so groß."
+  },
+  {
+    "id": 432,
+    "page": 19,
+    "raw": "r Strand, ä, -e",
+    "example": "Wir spielen am Strand."
+  },
+  {
+    "id": 433,
+    "page": 19,
+    "raw": "e Straße, -n",
+    "example": "Wir wohnen in der Goethe-Straße."
+  },
+  {
+    "id": 434,
+    "page": 19,
+    "raw": "s Stück, -e",
+    "example": "Willst du noch ein Stück Kuchen?"
+  },
+  {
+    "id": 435,
+    "page": 19,
+    "raw": "suchen",
+    "example": "Ich suche meinen Kugelschreiber."
+  },
+  {
+    "id": 436,
+    "page": 19,
+    "raw": "r Supermarkt, ä, -e",
+    "example": "Wir kaufen immer im Supermarkt ein."
+  },
+  {
+    "id": 437,
+    "page": 19,
+    "raw": "e Suppe, -n",
+    "example": "Ich kann auch Suppe kochen."
+  },
+  {
+    "id": 438,
+    "page": 19,
+    "raw": "süß",
+    "example": "Der Kaffee ist zu süß./Der neue Tennislehrer ist wirklich süß!"
+  },
+  {
+    "id": 439,
+    "page": 19,
+    "raw": "e Süßigkeiten (Pl.)",
+    "example": "Am liebsten esse ich Süßigkeiten."
+  },
+  {
+    "id": 440,
+    "page": 19,
+    "raw": "sympathisch",
+    "example": "Ich finde ihn sehr sympathisch."
+  },
+  {
+    "id": 441,
+    "page": 19,
+    "raw": "tanzen",
+    "example": "Leider kann er nicht gut tanzen."
+  },
+  {
+    "id": 442,
+    "page": 19,
+    "raw": "e Tasche, -n",
+    "example": "Die Tasche ist sehr schwer."
+  },
+  {
+    "id": 443,
+    "page": 19,
+    "raw": "s Taschengeld (Sg.)",
+    "example": "Wie viel Taschengeld bekommst du?"
+  },
+  {
+    "id": 444,
+    "page": 19,
+    "raw": "e Tasse, -n",
+    "example": "Ich möchte eine Tasse Kakao."
+  },
+  {
+    "id": 445,
+    "page": 19,
+    "raw": "r Tee, -s",
+    "example": "Am Abend trinken wir Tee."
+  },
+  {
+    "id": 446,
+    "page": 19,
+    "raw": "telefonieren",
+    "example": "Ich telefoniere oft mit meiner Freundin in Frankfurt."
+  },
+  {
+    "id": 447,
+    "page": 19,
+    "raw": "Tennis spielen",
+    "example": "Er spielt gut Tennis."
+  },
+  {
+    "id": 448,
+    "page": 19,
+    "raw": "teuer",
+    "example": "Mein neues Kleid war sehr teuer, aber es ist wunderbar."
+  },
+  {
+    "id": 449,
+    "page": 19,
+    "raw": "s Theater, -",
+    "example": "Am Sonntag waren wir im Theater."
+  },
+  {
+    "id": 450,
+    "page": 19,
+    "raw": "s Thema, Themen",
+    "example": "Wie heißt das Thema des Buchs?"
+  },
+  {
+    "id": 451,
+    "page": 19,
+    "raw": "s Tier, -e",
+    "example": "Ich möchte ein Tier haben: eine Katze oder einen Hund."
+  },
+  {
+    "id": 452,
+    "page": 19,
+    "raw": "r Tisch, -e",
+    "example": "Am Fenster ist ein Tisch."
+  },
+  {
+    "id": 453,
+    "page": 19,
+    "raw": "e Toilette, -n",
+    "example": "Wo ist die Toilette?"
+  },
+  {
+    "id": 454,
+    "page": 19,
+    "raw": "toll",
+    "example": "In den Ferien war es toll."
+  },
+  {
+    "id": 455,
+    "page": 19,
+    "raw": "tragen",
+    "example": "Er trägt Jeans"
+  },
+  {
+    "id": 456,
+    "page": 19,
+    "raw": "traurig",
+    "example": "Ich bin oft traurig."
+  },
+  {
+    "id": 457,
+    "page": 19,
+    "raw": "treffen",
+    "example": "Am Nachmittag treffe ich meine Freunde."
+  },
+  {
+    "id": 458,
+    "page": 19,
+    "raw": "trinken",
+    "example": "Wir trinken gern Saft."
+  },
+  {
+    "id": 459,
+    "page": 19,
+    "raw": "s T-Shirt, -s",
+    "example": "Wie gefällt dir mein neues T-Shirt?"
+  },
+  {
+    "id": 460,
+    "page": 19,
+    "raw": "tschüss!",
+    "example": "Also bis bald - tschüss!"
+  },
+  {
+    "id": 461,
+    "page": 19,
+    "raw": "e Tür, -en",
+    "example": "Die Tür ist auf."
+  },
+  {
+    "id": 462,
+    "page": 19,
+    "raw": "e U-Bahn, -en",
+    "example": "Wir nehmen die U-Bahn."
+  },
+  {
+    "id": 463,
+    "page": 19,
+    "raw": "üben",
+    "example": "Ich muss jeden Tag Klavier üben."
+  },
+  {
+    "id": 464,
+    "page": 19,
+    "raw": "über",
+    "example": "Jetzt gehen wir über die Straße."
+  },
+  {
+    "id": 465,
+    "page": 19,
+    "raw": "überall",
+    "example": "In der Altstadt gibt es überall kleine Cafés."
+  },
+  {
+    "id": 466,
+    "page": 19,
+    "raw": "e Uhr, -en",
+    "example": "Hast du keine Uhr?/Wie viel Uhr ist es?"
+  },
+  {
+    "id": 467,
+    "page": 19,
+    "raw": "um",
+    "example": "Um 7.30 Uhr kommt der Zug."
+  },
+  {
+    "id": 468,
+    "page": 19,
+    "raw": "und",
+    "example": "Karl und Susanne kommen auch."
+  },
+  {
+    "id": 469,
+    "page": 19,
+    "raw": "und so weiter",
+    "example": "usw."
+  },
+  {
+    "id": 470,
+    "page": 19,
+    "raw": "unser, -e",
+    "example": "Das ist unser neues Auto. (vergl. Grammatik)"
+  },
+  {
+    "id": 471,
+    "page": 19,
+    "raw": "r Unterricht (Sg.)",
+    "example": "Der Unterricht macht mir Spaß."
+  },
+  {
+    "id": 472,
+    "page": 20,
+    "raw": "verdienen",
+    "example": "In den Ferien möchte ich ein bisschen Geld verdienen."
+  },
+  {
+    "id": 473,
+    "page": 20,
+    "raw": "vergessen",
+    "example": "Ich vergesse oft die Vokabeln."
+  },
+  {
+    "id": 474,
+    "page": 20,
+    "raw": "verrückt",
+    "example": "Ich finde die Idee verrückt. Sie trägt so verrückte Kleider."
+  },
+  {
+    "id": 475,
+    "page": 20,
+    "raw": "verstehen",
+    "example": "Ich verstehe dich nicht."
+  },
+  {
+    "id": 476,
+    "page": 20,
+    "raw": "viel, -e",
+    "example": "Hast du viele Freunde?"
+  },
+  {
+    "id": 477,
+    "page": 20,
+    "raw": "vielleicht",
+    "example": "Kannst du mir vielleicht helfen?/Vielleicht kommt er."
+  },
+  {
+    "id": 478,
+    "page": 20,
+    "raw": "von",
+    "example": "Der Computer ist ein Geschenk von meinem Onkel./ Sie arbeitet von sieben bis neun./Er kommt von der Arbeit."
+  },
+  {
+    "id": 479,
+    "page": 20,
+    "raw": "vor",
+    "example": "Ich treffe Peter vor dem Kino./Vor dem Frühstück."
+  },
+  {
+    "id": 480,
+    "page": 20,
+    "raw": "r Vorname, -n",
+    "example": "Wie ist dein Vorname?"
+  },
+  {
+    "id": 481,
+    "page": 20,
+    "raw": "vorstellen (sich)",
+    "example": "Stell dich bitte vor!"
+  },
+  {
+    "id": 482,
+    "page": 20,
+    "raw": "wahr",
+    "example": "Das ist sicher nicht wahr./Das schmeckt gut, nicht wahr?"
+  },
+  {
+    "id": 483,
+    "page": 20,
+    "raw": "r Wald, ä, -er",
+    "example": "In Thüringen gibt es sehr viel Wald."
+  },
+  {
+    "id": 484,
+    "page": 20,
+    "raw": "wandern",
+    "example": "Am Wochenende wandern wir zum Tüngelsee."
+  },
+  {
+    "id": 485,
+    "page": 20,
+    "raw": "wann",
+    "example": "Wann hast du Geburtstag?"
+  },
+  {
+    "id": 486,
+    "page": 20,
+    "raw": "warm",
+    "example": "Gestern war es hier schon sehr warm."
+  },
+  {
+    "id": 487,
+    "page": 20,
+    "raw": "warten",
+    "example": "Wartest du schon lange?"
+  },
+  {
+    "id": 488,
+    "page": 20,
+    "raw": "warum",
+    "example": "Warum antwortest du nicht?"
+  },
+  {
+    "id": 489,
+    "page": 20,
+    "raw": "was",
+    "example": "Was kann man hier kaufen?"
+  },
+  {
+    "id": 490,
+    "page": 20,
+    "raw": "waschen",
+    "example": "Ich will meine Haare waschen."
+  },
+  {
+    "id": 491,
+    "page": 20,
+    "raw": "s Wasser (Sg.)",
+    "example": "Das Wasser ist so kalt./Gib mir bitte ein Glas Wasser."
+  },
+  {
+    "id": 492,
+    "page": 20,
+    "raw": "wecken",
+    "example": "Meine Mutter weckt mich um 7.30 Uhr."
+  },
+  {
+    "id": 493,
+    "page": 20,
+    "raw": "weh tun",
+    "example": "Mein Kopf tut so weh."
+  },
+  {
+    "id": 494,
+    "page": 20,
+    "raw": "weit",
+    "example": "Wir fahren zum See, das ist nicht weit."
+  },
+  {
+    "id": 495,
+    "page": 20,
+    "raw": "weiter",
+    "example": "Lies bitte weiter."
+  },
+  {
+    "id": 496,
+    "page": 20,
+    "raw": "welch- , -er, -e, -s",
+    "example": "Welche CD möchtest du?"
+  },
+  {
+    "id": 497,
+    "page": 20,
+    "raw": "wenig, e",
+    "example": "Ich habe heute wenig Zeit."
+  },
+  {
+    "id": 498,
+    "page": 20,
+    "raw": "wer",
+    "example": "Wer ist die elegante Frau?"
+  },
+  {
+    "id": 499,
+    "page": 20,
+    "raw": "werden",
+    "example": "Ich möchte Architekt werden."
+  },
+  {
+    "id": 500,
+    "page": 20,
+    "raw": "wichtig",
+    "example": "Ich glaube, die Frage ist wichtig."
+  },
+  {
+    "id": 501,
+    "page": 20,
+    "raw": "wie",
+    "example": "Wie heißt du?/Wie groß ist Berlin?/Wie alt ist er?/ Das ist wie im Kino!"
+  },
+  {
+    "id": 502,
+    "page": 20,
+    "raw": "wieder",
+    "example": "Ich möchte wieder nach Deutschland fahren."
+  },
+  {
+    "id": 503,
+    "page": 20,
+    "raw": "wiederholen",
+    "example": "Können Sie das bitte wiederholen?"
+  },
+  {
+    "id": 504,
+    "page": 20,
+    "raw": "s Wiedersehen, -",
+    "example": "Auf Wiedersehen."
+  },
+  {
+    "id": 505,
+    "page": 20,
+    "raw": "wie viel",
+    "example": "Wie viel kostet das?"
+  },
+  {
+    "id": 506,
+    "page": 20,
+    "raw": "willkommen",
+    "example": "Willkommen bei uns!"
+  },
+  {
+    "id": 507,
+    "page": 20,
+    "raw": "wir",
+    "example": "Wir haben eine neue Lehrerin. (vergl. Grammatik)"
+  },
+  {
+    "id": 508,
+    "page": 20,
+    "raw": "wirklich",
+    "example": "Willst du das wirklich kaufen?"
+  },
+  {
+    "id": 509,
+    "page": 20,
+    "raw": "wissen",
+    "example": "Ich weiß es nicht."
+  },
+  {
+    "id": 510,
+    "page": 20,
+    "raw": "wo",
+    "example": "Wo wohnt ihr?"
+  },
+  {
+    "id": 511,
+    "page": 20,
+    "raw": "woher",
+    "example": "Woher kommt der Zug?"
+  },
+  {
+    "id": 512,
+    "page": 20,
+    "raw": "wohin",
+    "example": "Wohin fährt der Bus?"
+  },
+  {
+    "id": 513,
+    "page": 20,
+    "raw": "wohnen",
+    "example": "Wo wohnst du?"
+  },
+  {
+    "id": 514,
+    "page": 21,
+    "raw": "e Wohnung, -en",
+    "example": "Unsere Wohnung hat drei Zimmer."
+  },
+  {
+    "id": 515,
+    "page": 21,
+    "raw": "s Wohnzimmer, -",
+    "example": "Ich mache die Hausaufgaben im Wohnzimmer."
+  },
+  {
+    "id": 516,
+    "page": 21,
+    "raw": "wollen",
+    "example": "Willst du meine Freunde kennenlernen?"
+  },
+  {
+    "id": 517,
+    "page": 21,
+    "raw": "s Wort , ö, -er",
+    "example": "Wie viele Wörter hat dein Brief?"
+  },
+  {
+    "id": 518,
+    "page": 21,
+    "raw": "wunderbar",
+    "example": "Das Essen schmeckt wunderbar."
+  },
+  {
+    "id": 519,
+    "page": 21,
+    "raw": "wünschen",
+    "example": "Ich wünsche dir schöne Ferien."
+  },
+  {
+    "id": 520,
+    "page": 21,
+    "raw": "e Wurst, ü, -e",
+    "example": "Ich möchte eine Curry-Wurst."
+  },
+  {
+    "id": 521,
+    "page": 21,
+    "raw": "r Zahn, ä, -e",
+    "example": "Mein Zahn tut weh."
+  },
+  {
+    "id": 522,
+    "page": 21,
+    "raw": "zeigen",
+    "example": "Zeigst du mir deinen Computer?"
+  },
+  {
+    "id": 523,
+    "page": 21,
+    "raw": "e Zeit, -en",
+    "example": "Wann hast du Zeit für mich?"
+  },
+  {
+    "id": 524,
+    "page": 21,
+    "raw": "e Zeitung, -en",
+    "example": "Meine Mutter liest am Morgen die Zeitung."
+  },
+  {
+    "id": 525,
+    "page": 21,
+    "raw": "s Zimmer, -",
+    "example": "Mein Zimmer ist sehr klein."
+  },
+  {
+    "id": 526,
+    "page": 21,
+    "raw": "zu",
+    "example": "zu groß/zum Frühstück/zum Zahnarzt/zur Post/ zum Geburtstag"
+  },
+  {
+    "id": 527,
+    "page": 21,
+    "raw": "zuerst",
+    "example": "Sagen Sie bitte zuerst den Vornamen."
+  },
+  {
+    "id": 528,
+    "page": 21,
+    "raw": "r Zug, ü, -e",
+    "example": "Wir nehmen den Zug."
+  },
+  {
+    "id": 529,
+    "page": 21,
+    "raw": "zum Beispiel",
+    "example": "z. B."
+  },
+  {
+    "id": 530,
+    "page": 21,
+    "raw": "zumachen",
+    "example": "Mach die Tür zu!"
+  },
+  {
+    "id": 531,
+    "page": 21,
+    "raw": "zusammen",
+    "example": "Wir machen zusammen Hausaufgaben."
+  },
+  {
+    "id": 532,
+    "page": 21,
+    "raw": "zu sein",
+    "example": "Die Bibliothek ist in den Ferien zu."
+  }
+]
