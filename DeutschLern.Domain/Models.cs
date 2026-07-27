@@ -36,7 +36,13 @@ public sealed class Vocabulary
     public Lesson? Lesson { get; set; }
     public List<ExampleSentence> Examples { get; set; } = [];
 
-    public void ValidateForPublishing() => throw new NotImplementedException();
+    public void ValidateForPublishing()
+    {
+        if (Examples.Count == 0)
+        {
+            throw new DomainValidationException("At least one example sentence is required.");
+        }
+    }
 }
 
 public sealed class ExampleSentence
