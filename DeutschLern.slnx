@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="DeutschLern.Application/DeutschLern.Application.csproj" />
+  <Project Path="DeutschLern.Domain/DeutschLern.Domain.csproj" />
+  <Project Path="DeutschLern.Infrastructure/DeutschLern.Infrastructure.csproj" />
+  <Project Path="DeutschLern.IntegrationTests/DeutschLern.IntegrationTests.csproj" />
+  <Project Path="DeutschLern.UnitTests/DeutschLern.UnitTests.csproj" />
+  <Project Path="DeutschLern.Web/DeutschLern.Web.csproj" />
+</Solution>
