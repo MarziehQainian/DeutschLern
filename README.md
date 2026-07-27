@@ -1,93 +1,104 @@
 # DeutschLern
 
-DeutschLern یک اپلیکیشن وب آموزش واژگان آلمانی برای فارسی‌زبانان از سطح A1 تا C1 است. مسیر یادگیری مرحله‌ای است: درس اول هر سطح آزاد است و درس بعدی فقط پس از کسب حداقل ۶۰٪ در آزمون درس قبلی باز می‌شود.
+DeutschLern is a German vocabulary learning web application designed for Persian speakers, covering levels A1 through C1. The learning path is progressive: the first lesson of each level is unlocked by default, while subsequent lessons become available only after the student scores at least 60% on the previous lesson’s quiz.
 
-## قابلیت‌ها
+## Features
 
-- ثبت‌نام و ورود دانش‌آموز با ASP.NET Core Identity
-- داشبورد پیشرفت، آخرین تلاش و بالاترین نمره
-- واژگان همراه نوع کلمه، حرف تعریف، جمع، مثال آلمانی و ترجمه فارسی
-- آزمون چندگزینه‌ای با امکان تلاش مجدد و نمایش نتیجه پس از ثبت
-- کنترل دسترسی درس بعدی در Backend
-- پنل Admin برای مدیریت سطح‌ها، درس‌ها، واژگان، مثال‌ها و آزمون‌ها
-- رابط فارسی/آلمانی، Responsive و RTL کامل برای فارسی
-- ذخیره تمام تلاش‌های آزمون و پاسخ‌های هر تلاش
+* Student registration and authentication with ASP.NET Core Identity
+* Progress dashboard showing the latest attempt and highest score
+* Vocabulary entries with word type, article, plural form, German example sentences, and Persian translations
+* Multiple-choice quizzes with retry support and results displayed after submission
+* Backend enforcement of lesson progression rules
+* Admin panel for managing levels, lessons, vocabulary, examples, and quizzes
+* Responsive Persian/German interface with full RTL support for Persian
+* Storage of all quiz attempts and the submitted answers for each attempt
 
-## فناوری‌ها
+## Technologies
 
-.NET 10، ASP.NET Core Blazor Web App، Entity Framework Core Code First، SQL Server، ASP.NET Core Identity، xUnit، FluentAssertions و GitHub Actions.
+.NET 10, ASP.NET Core Blazor Web App, Entity Framework Core Code First, SQL Server, ASP.NET Core Identity, xUnit, FluentAssertions, and GitHub Actions.
 
-## ساختار
+## Project Structure
 
 ```text
-DeutschLern.Domain           مدل‌ها و قواعد مستقل دامنه
-DeutschLern.Application      use case contractها و قواعد آموزشی
-DeutschLern.Infrastructure   EF Core، Fluent API و سرویس یادگیری
-DeutschLern.Web              Blazor UI، Identity و endpointها
-DeutschLern.UnitTests        تست‌های قواعد کسب‌وکار
-DeutschLern.IntegrationTests تست EF، امنیت و جریان آزمون
+DeutschLern.Domain            Domain models and independent business rules
+DeutschLern.Application       Use-case contracts and learning rules
+DeutschLern.Infrastructure    EF Core, Fluent API, and learning services
+DeutschLern.Web               Blazor UI, Identity, and endpoints
+DeutschLern.UnitTests         Business-rule tests
+DeutschLern.IntegrationTests  EF Core, security, and quiz-flow tests
 ```
 
-وابستگی‌ها به سمت داخل حرکت می‌کنند. برای خوانایی پروژه از MediatR، CQRS و Generic Repository استفاده نشده است؛ EF Core مستقیماً نقش unit of work را دارد و abstraction فقط در مرز use case یادگیری تعریف شده است.
+Dependencies point inward. MediatR, CQRS, and a generic repository have intentionally not been used to keep the project easy to understand. EF Core directly provides unit-of-work functionality, while abstractions are defined only at the boundaries of learning use cases.
 
-## پیش‌نیازها
+## Prerequisites
 
-- [.NET SDK 10](https://dotnet.microsoft.com/download)
-- SQL Server 2022 یا SQL Server LocalDB
-- EF Core CLI:
+* .NET 10 SDK
+* SQL Server 2022 or SQL Server LocalDB
+* EF Core CLI:
 
-```powershell
+```bash
 dotnet tool install --global dotnet-ef --version 10.*
 ```
 
-## تنظیم SQL Server
+## SQL Server Configuration
 
-تنظیم پیش‌فرض Windows از LocalDB و دیتابیس `DeutschLern` استفاده می‌کند. برای SQL Server دیگر، connection string را خارج از Git تنظیم کنید:
+The default Windows configuration uses LocalDB with a database named `DeutschLern`. To use another SQL Server instance, configure the connection string outside Git:
 
-```powershell
+```bash
 dotnet user-secrets --project DeutschLern.Web set "ConnectionStrings:DefaultConnection" "Server=localhost;Database=DeutschLern;Trusted_Connection=True;TrustServerCertificate=True"
 ```
 
-در CI یا سرور می‌توان از متغیر محیطی `ConnectionStrings__DefaultConnection` استفاده کرد. connection string و رمز واقعی نباید در فایل‌های repository قرار گیرند.
+In CI or server environments, the `ConnectionStrings__DefaultConnection` environment variable can be used. Real connection strings and passwords must not be stored in repository files.
 
-## Migration و اجرا
+## Migrations and Running the Application
 
-این برنامه برای ساده نگه‌داشتن جداسازی Identity و محتوای آموزشی، دو DbContext روی یک دیتابیس دارد:
+To keep Identity and learning content separated, the application uses two `DbContext` classes connected to the same database:
 
-```powershell
+```bash
 dotnet restore DeutschLern.slnx --configfile NuGet.Config
-dotnet ef database update --project DeutschLern.Infrastructure --startup-project DeutschLern.Web --context LearningDbContext
-dotnet ef database update --project DeutschLern.Web --startup-project DeutschLern.Web --context ApplicationDbContext
+
+dotnet ef database update \
+  --project DeutschLern.Infrastructure \
+  --startup-project DeutschLern.Web \
+  --context LearningDbContext
+
+dotnet ef database update \
+  --project DeutschLern.Web \
+  --startup-project DeutschLern.Web \
+  --context ApplicationDbContext
+
 dotnet run --project DeutschLern.Web
 ```
 
-Migration اولیه سطوح A1، A2، B1، B2 و C1 را seed می‌کند.
+The initial migration seeds the A1, A2, B1, B2, and C1 language levels.
 
-## حساب Admin در Development
+## Development Admin Account
 
-اطلاعات Admin در repository ذخیره نمی‌شود. پیش از اولین اجرا آن را با User Secrets تعیین کنید:
+Admin credentials are not stored in the repository. Configure them with User Secrets before the first run:
 
-```powershell
+```bash
 dotnet user-secrets --project DeutschLern.Web set "DevelopmentAdmin:Email" "admin@example.local"
-dotnet user-secrets --project DeutschLern.Web set "DevelopmentAdmin:Password" "یک-رمز-قوی-شخصی"
+
+dotnet user-secrets --project DeutschLern.Web set "DevelopmentAdmin:Password" "your-personal-strong-password"
 ```
 
-در شروع Development، نقش‌های `Admin` و `Student` ساخته می‌شوند و حساب تنظیم‌شده عضو نقش Admin خواهد شد. کاربران ثبت‌نام‌شده به‌صورت خودکار نقش Student می‌گیرند.
+When the application starts in the Development environment, the `Admin` and `Student` roles are created. The configured development account is assigned to the `Admin` role. Newly registered users are automatically assigned to the `Student` role.
 
-## Build و Test
+## Build and Test
 
-```powershell
+```bash
 dotnet build DeutschLern.slnx --configuration Release
 dotnet test DeutschLern.slnx --configuration Release
 ```
 
-Workflow گیت‌هاب در هر Push و Pull Request عملیات Restore، Build و Test را روی Windows انجام می‌دهد.
+The GitHub Actions workflow runs Restore, Build, and Test on Windows for every push and pull request.
 
-## تصمیم‌های امنیتی و داده
+## Security and Data Design Decisions
 
-- پنل و endpoint مدیریتی با Role-based Authorization محافظت شده‌اند.
-- endpoint ثبت آزمون Antiforgery را اعتبارسنجی می‌کند.
-- DTO آزمون پیش از Submit شامل `IsCorrect` یا شناسه پاسخ صحیح نیست.
-- انتخاب گزینه، تعلق سؤال به آزمون و دسترسی به درس در سرور اعتبارسنجی می‌شوند.
-- محدودیت طول، indexهای یکتا، precision و delete behaviorها با Fluent API تعریف شده‌اند.
-- هر تلاش آزمون مستقل ذخیره می‌شود؛ بالاترین نمره کاهش نمی‌یابد و آخرین تلاش جداگانه نگهداری می‌شود.
+* The Admin panel and administrative endpoints are protected with role-based authorization.
+* The quiz submission endpoint validates antiforgery tokens.
+* Quiz DTOs do not expose `IsCorrect` or the correct option ID before submission.
+* The server validates selected options, question–quiz relationships, and lesson access.
+* String-length limits, unique indexes, numeric precision, and delete behaviors are configured with the EF Core Fluent API.
+* Every quiz attempt is stored independently.
+* A student’s highest score never decreases, while the latest attempt is tracked separately.
