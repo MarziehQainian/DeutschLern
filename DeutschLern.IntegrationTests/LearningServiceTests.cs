@@ -10,6 +10,25 @@ namespace DeutschLern.IntegrationTests;
 public sealed class LearningServiceTests
 {
     [Fact]
+    public async Task Development_seed_is_complete_and_idempotent()
+    {
+        await using var db = CreateDatabase();
+        await db.Database.EnsureCreatedAsync();
+
+        await DevelopmentDataSeeder.SeedAsync(db);
+        await DevelopmentDataSeeder.SeedAsync(db);
+
+        (await db.Lessons.CountAsync()).Should().Be(10);
+        (await db.Vocabularies.CountAsync()).Should().Be(30);
+        (await db.ExampleSentences.CountAsync()).Should().Be(30);
+        (await db.Quizzes.CountAsync()).Should().Be(10);
+        (await db.QuizQuestions.CountAsync()).Should().Be(30);
+        (await db.QuizOptions.CountAsync()).Should().Be(120);
+        (await db.Vocabularies.AllAsync(x => x.Examples.Count > 0)).Should().BeTrue();
+        (await db.Lessons.AllAsync(x => x.Quiz != null)).Should().BeTrue();
+    }
+
+    [Fact]
     public async Task Passing_attempt_is_stored_and_updates_progress()
     {
         await using var db = CreateDatabase();

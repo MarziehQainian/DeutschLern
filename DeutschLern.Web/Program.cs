@@ -142,6 +142,9 @@ static async Task SeedIdentityAsync(
         return;
     }
 
+    var learningDbContext = scope.ServiceProvider.GetRequiredService<LearningDbContext>();
+    await DevelopmentDataSeeder.SeedAsync(learningDbContext);
+
     var email = configuration["DevelopmentAdmin:Email"];
     var password = configuration["DevelopmentAdmin:Password"];
     if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
