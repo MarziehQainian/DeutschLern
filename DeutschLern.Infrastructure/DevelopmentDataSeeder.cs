@@ -29,6 +29,7 @@ public static class DevelopmentDataSeeder
         await dbContext.SaveChangesAsync(cancellationToken);
         await A1BookVocabularySeeder.SeedAsync(dbContext, cancellationToken);
         await A2BookVocabularySeeder.SeedAsync(dbContext, cancellationToken);
+        await B1BookVocabularySeeder.SeedAsync(dbContext, cancellationToken);
     }
 
     private static Lesson CreateLesson(int levelId, LessonSeed seed)
