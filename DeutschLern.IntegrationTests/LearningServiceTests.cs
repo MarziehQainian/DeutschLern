@@ -18,12 +18,12 @@ public sealed class LearningServiceTests
         await DevelopmentDataSeeder.SeedAsync(db);
         await DevelopmentDataSeeder.SeedAsync(db);
 
-        (await db.Lessons.CountAsync()).Should().Be(10);
-        (await db.Vocabularies.CountAsync()).Should().Be(30);
-        (await db.ExampleSentences.CountAsync()).Should().Be(30);
-        (await db.Quizzes.CountAsync()).Should().Be(10);
-        (await db.QuizQuestions.CountAsync()).Should().Be(30);
-        (await db.QuizOptions.CountAsync()).Should().Be(120);
+        (await db.Lessons.CountAsync()).Should().Be(22);
+        (await db.Vocabularies.CountAsync()).Should().Be(561);
+        (await db.ExampleSentences.CountAsync()).Should().Be(561);
+        (await db.Quizzes.CountAsync()).Should().Be(22);
+        (await db.QuizQuestions.CountAsync()).Should().Be(150);
+        (await db.QuizOptions.CountAsync()).Should().Be(600);
         (await db.Vocabularies.AllAsync(x => x.Examples.Count > 0)).Should().BeTrue();
         (await db.Lessons.AllAsync(x => x.Quiz != null)).Should().BeTrue();
     }
