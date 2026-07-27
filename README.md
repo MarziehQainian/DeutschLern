@@ -72,16 +72,18 @@ The initial learning migration seeds the A1, A2, B1, B2, and C1 levels.
 
 In Development, an idempotent sample dataset is also created on first startup:
 
-- 36 ordered lessons in total
-- 1,752 vocabulary records
-- 1,752 German example sentences with Persian translations
-- 36 quizzes
-- 290 quiz questions
-- 1,160 answer options
+- 54 ordered lessons in total
+- 4,769 vocabulary records
+- 4,769 German example sentences with Persian translations
+- 54 quizzes
+- 470 quiz questions
+- 1,880 answer options
 
 The A1 book import contains 532 source entries. One duplicate `Fahrrad` cross-reference is removed, resulting in 531 unique imported vocabulary records organized into 12 alphabetic A1 lessons. The extraction tool is available at `tools/extract_a1_vocabulary.py`; the source PDF itself is not stored in the repository.
 
 The A2 book import contains 1,192 source entries. One repeated `Wolke` entry is removed, resulting in 1,191 unique imported vocabulary records organized into 14 alphabetic A2 lessons. The extraction tool is available at `tools/extract_a2_vocabulary.py`; the source PDF itself is not stored in the repository.
+
+The B1 book import contains 3,028 curated source entries. Eleven exact repetitions are removed, resulting in 3,017 unique imported vocabulary records organized into 18 alphabetic B1 lessons. The extraction tool is available at `tools/extract_b1_vocabulary.py`; the source PDF itself is not stored in the repository.
 
 Restarting the application does not duplicate the sample data. Development data is never seeded in Production.
 
